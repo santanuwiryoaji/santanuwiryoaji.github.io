@@ -7,7 +7,9 @@
   <meta name="theme-color" content="#101216">
 
   <title>Santanu Wiryo Aji | Multimedia Creative &amp; Visual Storyteller</title>
+
   <meta name="description" content="Portofolio Santanu Wiryo Aji. Multimedia Creative yang berfokus pada videografi, fotografi, desain grafis, dan visual storytelling.">
+
   <link rel="canonical" href="https://santanuwiryoaji.my.id/">
 
   <style>
@@ -108,7 +110,8 @@
       margin: 22px 0;
     }
 
-    .hero p, .muted {
+    .hero p,
+    .muted {
       max-width: 680px;
       color: var(--muted);
       font-size: 17px;
@@ -148,6 +151,8 @@
       letter-spacing: -1.5px;
       margin: 0 0 24px;
     }
+
+    /* ABOUT */
 
     .about-content {
       max-width: 720px;
@@ -228,35 +233,40 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      background: #14191b;
     }
 
-    .reel-media {
-      background:
-        radial-gradient(circle at 55% 35%,
-          #3c4c39 0%, transparent 48%),
-        linear-gradient(135deg,
-          #26352c 0%, #11181a 55%, #080a0b 100%);
+    /* REAL VIDEO THUMBNAIL */
+
+    .project-media img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .4s;
     }
 
-    .photo-media {
-      background: linear-gradient(140deg,
-        #343c42, #12191e 60%, #080a0d);
+    .project:hover .project-media img {
+      transform: scale(1.05);
     }
 
-    .design-media {
-      background: linear-gradient(135deg,
-        #35333f, #24252a 55%, #101116);
-    }
-
-    .project-media::after {
+    .reel-media::after {
       content: "";
       position: absolute;
-      inset: 12px;
-      border: 1px solid rgba(255,255,255,.12);
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.05) 70%
+      );
       pointer-events: none;
     }
 
     .play-icon {
+      position: relative;
+      z-index: 2;
       display: grid;
       place-items: center;
       width: 74px;
@@ -264,9 +274,32 @@
       border-radius: 50%;
       background: var(--accent);
       color: #111;
-      font-size: 30px;
+      font-size: 28px;
       padding-left: 5px;
       box-shadow: 0 12px 45px rgba(0,0,0,.4);
+      transition: transform .3s;
+    }
+
+    .project:hover .play-icon {
+      transform: scale(1.1);
+    }
+
+    .photo-media {
+      background: linear-gradient(
+        140deg,
+        #343c42,
+        #12191e 60%,
+        #080a0d
+      );
+    }
+
+    .design-media {
+      background: linear-gradient(
+        135deg,
+        #35333f,
+        #24252a 55%,
+        #101116
+      );
     }
 
     .media-word {
@@ -275,6 +308,8 @@
       letter-spacing: 3px;
       opacity: .45;
     }
+
+    /* PROJECT INFORMATION */
 
     .project-info {
       padding: 25px;
@@ -386,7 +421,11 @@
         scroll-behavior: auto;
       }
 
-      .button, .card, .project {
+      .button,
+      .card,
+      .project,
+      .project-media img,
+      .play-icon {
         transition: none;
       }
     }
@@ -395,6 +434,8 @@
 
 <body>
   <div class="container">
+
+    <!-- HEADER -->
 
     <header>
       <a class="logo" href="#">
@@ -412,6 +453,7 @@
     <main>
 
       <!-- HERO -->
+
       <div class="hero">
         <div class="eyebrow">
           MULTIMEDIA CREATIVE — 2026
@@ -437,6 +479,7 @@
       </div>
 
       <!-- ABOUT -->
+
       <section id="tentang" class="divider">
         <div class="eyebrow">01 / ABOUT ME</div>
         <h2>Tentang Saya</h2>
@@ -476,7 +519,8 @@
         </div>
       </section>
 
-      <!-- SKILLS -->
+      <!-- CREATIVE SKILLS -->
+
       <section id="keahlian" class="divider">
         <div class="eyebrow">02 / CREATIVE SKILLS</div>
         <h2>Keahlian Kreatif</h2>
@@ -518,9 +562,10 @@
       </section>
 
       <!-- PORTFOLIO -->
+
       <section id="karya" class="divider">
         <div class="eyebrow">03 / SELECTED WORKS</div>
-        <h2>Portofolio & Karya</h2>
+        <h2>Portofolio &amp; Karya</h2>
 
         <p class="muted">
           Kumpulan proyek pilihan dalam bidang
@@ -529,24 +574,45 @@
 
         <div class="portfolio-grid">
 
-          <!-- REAL INSTAGRAM REEL -->
+          <!-- PROJECT 001 : RAFTING -->
+
           <article class="project">
-            <div class="project-media reel-media">
-              <span class="play-icon" aria-hidden="true">▶</span>
-            </div>
+
+            <a
+              class="project-media reel-media"
+              href="https://www.instagram.com/reel/DeEkuOCPXRk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Tonton video arung jeram di Instagram"
+            >
+              <img
+                src="arung-jeram-reel.jpg"
+                alt="Adegan rafting melewati aliran sungai berbatu dan jembatan lengkung"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <span class="play-icon" aria-hidden="true">
+                ▶
+              </span>
+            </a>
 
             <div class="project-info">
+
               <span class="project-type">
                 VIDEOGRAPHY / PROJECT 001
               </span>
 
-              <h3>Instagram Reel — Video Editing</h3>
+              <h3>
+                Adventure Rafting — Cinematic Video
+              </h3>
 
               <p>
-                Salah satu karya video yang saya
-                publikasikan melalui Instagram Reels.
-                Tonton hasil editing selengkapnya
-                melalui tautan berikut.
+                Cuplikan aktivitas arung jeram
+                dengan pemandangan bebatuan,
+                aliran sungai, dan jembatan lengkung.
+                Sebuah karya video pendek yang
+                dipublikasikan melalui Instagram Reels.
               </p>
 
               <a
@@ -554,20 +620,25 @@
                 href="https://www.instagram.com/reel/DeEkuOCPXRk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Tonton karya video pertama di Instagram"
               >
-                Tonton di Instagram ↗
+                Tonton Video ↗
               </a>
+
             </div>
           </article>
 
-          <!-- PHOTOGRAPHY PLACEHOLDER -->
+          <!-- PHOTOGRAPHY -->
+
           <article class="project">
+
             <div class="project-media photo-media">
-              <span class="media-word">PHOTO</span>
+              <span class="media-word">
+                PHOTO
+              </span>
             </div>
 
             <div class="project-info">
+
               <span class="project-type">
                 PHOTOGRAPHY / GALLERY
               </span>
@@ -582,16 +653,22 @@
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
+
             </div>
           </article>
 
-          <!-- GRAPHIC DESIGN PLACEHOLDER -->
+          <!-- GRAPHIC DESIGN -->
+
           <article class="project">
+
             <div class="project-media design-media">
-              <span class="media-word">DESIGN</span>
+              <span class="media-word">
+                DESIGN
+              </span>
             </div>
 
             <div class="project-info">
+
               <span class="project-type">
                 GRAPHIC DESIGN / GALLERY
               </span>
@@ -606,6 +683,7 @@
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
+
             </div>
           </article>
 
@@ -613,9 +691,14 @@
       </section>
 
       <!-- CONTACT -->
+
       <section id="kontak" class="divider">
         <div class="contact">
-          <div class="eyebrow">04 / GET IN TOUCH</div>
+
+          <div class="eyebrow">
+            04 / GET IN TOUCH
+          </div>
+
           <h2>Mari Terhubung.</h2>
 
           <p class="muted">
@@ -624,10 +707,13 @@
             Informasi kontak profesional akan
             segera tersedia di sini.
           </p>
+
         </div>
       </section>
 
     </main>
+
+    <!-- FOOTER -->
 
     <footer>
       © 2026 Santanu Wiryo Aji.
