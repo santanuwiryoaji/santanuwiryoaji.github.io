@@ -251,6 +251,51 @@
       .after-hero { padding-top: 42px; }
     }
     @media (prefers-reduced-motion: reduce) { .hero-header nav a { transition: none; } }
+
+
+    /* VERSION 2.7 — MOBILE CINEMATIC REFINEMENT */
+    @media (max-width: 650px) {
+      /* Hero takes the full phone screen instead of being compressed */
+      .hero-shell { min-height: max(810px, 100svh); margin: 7px; }
+      .hero-header { padding: 25px 22px 10px; gap: 17px; }
+      .hero-brand strong { font-size: 27px; }
+      .hero-brand small { font-size: 9.5px; letter-spacing: .18em; }
+      .hero-header nav { gap: 8px 14px; }
+      .hero-header nav a { font-size: 11.5px; letter-spacing: .01em; line-height: 1.65; }
+      /* Keep the face visible in the upper portion of the phone */
+      .hero-photo {
+        top: 10%;
+        height: 71%;
+        width: 100%;
+        object-position: 17% 28%;
+        opacity: .85;
+        -webkit-mask-image: linear-gradient(to top, transparent 0%, #000 27%, #000 84%, transparent 100%);
+        mask-image: linear-gradient(to top, transparent 0%, #000 27%, #000 84%, transparent 100%);
+      }
+      /* Dark lower area protects the typography and call to action */
+      .hero-shell::after {
+        background: linear-gradient(to top,
+          #0b0807 0%,
+          rgba(9, 6, 6, .98) 14%,
+          rgba(9, 6, 6, .83) 31%,
+          rgba(9, 6, 6, .06) 61%,
+          rgba(9, 6, 6, .42) 100%);
+      }
+      .hero-stage { padding: 24px 22px 183px; align-items: flex-end; }
+      .hero-label { font-size: 10.5px; letter-spacing: .12em; line-height: 1.5; max-width: 335px; }
+      .hero-heading { margin-top: 13px; font-size: clamp(49px, 12.6vw, 68px); line-height: 1.01; letter-spacing: -.045em; }
+      .hero-rule { width: 65px; margin-top: 19px; }
+      .hero-note { left: 22px; right: 22px; bottom: 47px; width: auto; max-width: 360px; font-size: 14px; line-height: 1.55; }
+      .hero-note p { margin-bottom: 14px; }
+      .hero-cta { font-size: 12px; }
+      .after-hero { padding-top: 45px; }
+    }
+    @media (max-width: 380px) {
+      .hero-header nav { gap: 7px 12px; }
+      .hero-header nav a { font-size: 11px; }
+      .hero-heading { font-size: clamp(45px, 12.5vw, 52px); }
+      .hero-stage { padding-bottom: 188px; }
+    }
   </style>
 </head>
 <body>
