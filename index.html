@@ -7,8 +7,7 @@
   <meta name="theme-color" content="#101216">
 
   <title>Santanu Wiryo Aji | Multimedia Creative &amp; Visual Storyteller</title>
-
-  <meta name="description" content="Portofolio Santanu Wiryo Aji. Multimedia Creative yang berfokus pada videografi, fotografi, desain grafis, dan visual storytelling.">
+  <meta name="description" content="Portofolio Santanu Wiryo Aji, Multimedia Creative yang berfokus pada videografi, fotografi, desain grafis, dan visual storytelling.">
 
   <link rel="canonical" href="https://santanuwiryoaji.my.id/">
 
@@ -22,13 +21,9 @@
       --border: #303238;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -48,14 +43,14 @@
       margin: auto;
     }
 
-    /* NAVIGATION */
+    /* HEADER */
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      align-items: center;
       padding: 24px 0;
+      gap: 20px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -65,9 +60,7 @@
       letter-spacing: -1px;
     }
 
-    .accent {
-      color: var(--accent);
-    }
+    .accent { color: var(--accent); }
 
     nav {
       display: flex;
@@ -76,14 +69,11 @@
     }
 
     nav a {
-      font-size: 14px;
       color: #c6c6c6;
-      transition: color .25s;
+      font-size: 14px;
     }
 
-    nav a:hover {
-      color: var(--accent);
-    }
+    nav a:hover { color: var(--accent); }
 
     /* HERO */
 
@@ -128,19 +118,17 @@
       margin-top: 25px;
       border-radius: 5px;
       font-weight: 700;
-      transition: transform .25s, background .25s;
+      transition: transform .3s;
     }
 
     .button:hover {
-      background: #ddffac;
       transform: translateY(-3px);
+      background: #ddffac;
     }
 
     /* SECTIONS */
 
-    section {
-      padding: 85px 0;
-    }
+    section { padding: 85px 0; }
 
     .divider {
       border-top: 1px solid var(--border);
@@ -152,11 +140,7 @@
       margin: 0 0 24px;
     }
 
-    /* ABOUT */
-
-    .about-content {
-      max-width: 720px;
-    }
+    .about-content { max-width: 720px; }
 
     .about-content p {
       color: var(--muted);
@@ -164,7 +148,7 @@
       margin-bottom: 24px;
     }
 
-    /* CREATIVE SKILLS */
+    /* SKILLS */
 
     .cards {
       display: grid;
@@ -179,7 +163,7 @@
       border-radius: 10px;
       padding: 28px;
       min-height: 220px;
-      transition: transform .25s, border-color .25s;
+      transition: transform .3s, border-color .3s;
     }
 
     .card:hover {
@@ -200,11 +184,11 @@
     }
 
     .card p {
-      font-size: 15px;
       color: var(--muted);
+      font-size: 15px;
     }
 
-    /* PORTFOLIO GALLERY */
+    /* PORTFOLIO */
 
     .portfolio-grid {
       display: grid;
@@ -218,7 +202,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
-      transition: transform .25s, border-color .25s;
+      transition: transform .3s, border-color .3s;
     }
 
     .project:hover {
@@ -235,8 +219,6 @@
       overflow: hidden;
       background: #14191b;
     }
-
-    /* REAL VIDEO THUMBNAIL */
 
     .project-media img {
       position: absolute;
@@ -277,43 +259,28 @@
       font-size: 28px;
       padding-left: 5px;
       box-shadow: 0 12px 45px rgba(0,0,0,.4);
-      transition: transform .3s;
-    }
-
-    .project:hover .play-icon {
-      transform: scale(1.1);
     }
 
     .photo-media {
       background: linear-gradient(
-        140deg,
-        #343c42,
-        #12191e 60%,
-        #080a0d
+        140deg, #343c42, #12191e 60%, #080a0d
       );
     }
 
     .design-media {
       background: linear-gradient(
-        135deg,
-        #35333f,
-        #24252a 55%,
-        #101116
+        135deg, #35333f, #24252a 55%, #101116
       );
     }
 
     .media-word {
-      font-size: clamp(22px, 3vw, 36px);
+      font-size: 30px;
       font-weight: 800;
       letter-spacing: 3px;
       opacity: .45;
     }
 
-    /* PROJECT INFORMATION */
-
-    .project-info {
-      padding: 25px;
-    }
+    .project-info { padding: 25px; }
 
     .project-type {
       display: block;
@@ -321,6 +288,13 @@
       font-size: 11px;
       letter-spacing: 2px;
       font-weight: 700;
+    }
+
+    .project-date {
+      display: block;
+      color: #909399;
+      font-size: 12px;
+      margin-top: 9px;
     }
 
     .project-info h3 {
@@ -342,11 +316,21 @@
       font-weight: 700;
       border-bottom: 1px solid var(--accent);
       padding-bottom: 4px;
+      margin-right: 12px;
+      margin-bottom: 8px;
     }
 
-    .project-link:hover {
-      color: #fff;
+    .project-link:hover { color: #fff; }
+
+    .source-link {
+      display: inline-block;
+      font-size: 12px;
+      color: #a9a9af;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
+
+    .source-link:hover { color: #fff; }
 
     .project-status {
       color: #858891;
@@ -362,9 +346,7 @@
       padding: 55px;
     }
 
-    .contact h2 {
-      margin-top: 14px;
-    }
+    .contact h2 { margin-top: 14px; }
 
     footer {
       border-top: 1px solid var(--border);
@@ -373,7 +355,7 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
     @media (max-width: 700px) {
       header {
@@ -381,51 +363,33 @@
         align-items: flex-start;
       }
 
-      nav {
-        gap: 15px;
-      }
+      nav { gap: 15px; }
+      nav a { font-size: 13px; }
 
-      nav a {
-        font-size: 13px;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
+      h1 { letter-spacing: -2px; }
 
       .hero {
         min-height: 65vh;
         padding: 65px 0;
       }
 
-      section {
-        padding: 60px 0;
-      }
+      section { padding: 60px 0; }
 
       .cards,
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
 
-      .contact {
-        padding: 30px;
-      }
+      .contact { padding: 30px; }
 
-      .about-content p {
-        font-size: 16px;
-      }
+      .about-content p { font-size: 16px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
 
-      .button,
-      .card,
-      .project,
-      .project-media img,
-      .play-icon {
+      .button, .card, .project,
+      .project-media img {
         transition: none;
       }
     }
@@ -478,7 +442,7 @@
         </a>
       </div>
 
-      <!-- ABOUT -->
+      <!-- ABOUT ME -->
 
       <section id="tentang" class="divider">
         <div class="eyebrow">01 / ABOUT ME</div>
@@ -561,20 +525,20 @@
         </div>
       </section>
 
-      <!-- PORTFOLIO -->
+      <!-- SELECTED WORKS -->
 
       <section id="karya" class="divider">
         <div class="eyebrow">03 / SELECTED WORKS</div>
         <h2>Portofolio &amp; Karya</h2>
 
         <p class="muted">
-          Kumpulan proyek pilihan dalam bidang
-          videografi, fotografi, dan desain grafis.
+          Dokumentasi proyek dan karya pilihan
+          dalam videografi, fotografi, dan desain grafis.
         </p>
 
         <div class="portfolio-grid">
 
-          <!-- PROJECT 001 : RAFTING -->
+          <!-- PROJECT 001: SUSUR SUNGAI BANGO -->
 
           <article class="project">
 
@@ -583,11 +547,11 @@
               href="https://www.instagram.com/reel/DeEkuOCPXRk/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Tonton video arung jeram di Instagram"
+              aria-label="Tonton dokumentasi Susur Sungai Bango 2026"
             >
               <img
                 src="arung-jeram-reel.jpg"
-                alt="Adegan rafting melewati aliran sungai berbatu dan jembatan lengkung"
+                alt="Dokumentasi kegiatan Susur Sungai Bango 2026, peserta menggunakan perahu di sungai berbatu"
                 loading="lazy"
                 decoding="async"
               >
@@ -600,19 +564,26 @@
             <div class="project-info">
 
               <span class="project-type">
-                VIDEOGRAPHY / PROJECT 001
+                VIDEOGRAPHY / EVENT DOCUMENTARY
+              </span>
+
+              <span class="project-date">
+                09 SEPTEMBER 2026 · MALANG, INDONESIA
               </span>
 
               <h3>
-                Adventure Rafting — Cinematic Video
+                Susur Sungai Bango 2026
               </h3>
 
               <p>
-                Cuplikan aktivitas arung jeram
-                dengan pemandangan bebatuan,
-                aliran sungai, dan jembatan lengkung.
-                Sebuah karya video pendek yang
-                dipublikasikan melalui Instagram Reels.
+                Karya video editing yang menampilkan
+                dokumentasi kegiatan Susur Sungai Bango
+                pada 9 September 2026 di Malang.
+
+                Kegiatan lintas instansi dan komunitas
+                ini berfokus pada pemantauan kondisi
+                sungai, identifikasi potensi pencemaran,
+                dan pelestarian sumber air.
               </p>
 
               <a
@@ -624,6 +595,15 @@
                 Tonton Video ↗
               </a>
 
+              <a
+                class="source-link"
+                href="https://restamalangkota.jatim.polri.go.id/susur-sungai-bango-2026-kapolresta-malang-kota-dorong-sinergi-jaga-kebersihan-dan-pasokan-air/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Informasi Kegiatan
+              </a>
+
             </div>
           </article>
 
@@ -632,13 +612,10 @@
           <article class="project">
 
             <div class="project-media photo-media">
-              <span class="media-word">
-                PHOTO
-              </span>
+              <span class="media-word">PHOTO</span>
             </div>
 
             <div class="project-info">
-
               <span class="project-type">
                 PHOTOGRAPHY / GALLERY
               </span>
@@ -653,7 +630,6 @@
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
-
             </div>
           </article>
 
@@ -662,13 +638,10 @@
           <article class="project">
 
             <div class="project-media design-media">
-              <span class="media-word">
-                DESIGN
-              </span>
+              <span class="media-word">DESIGN</span>
             </div>
 
             <div class="project-info">
-
               <span class="project-type">
                 GRAPHIC DESIGN / GALLERY
               </span>
@@ -676,14 +649,13 @@
               <h3>Design Works</h3>
 
               <p>
-                Karya desain grafis, eksplorasi
-                tipografi, dan komunikasi visual.
+                Karya desain grafis, eksplorasi tipografi,
+                dan komunikasi visual.
               </p>
 
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
-
             </div>
           </article>
 
@@ -694,7 +666,6 @@
 
       <section id="kontak" class="divider">
         <div class="contact">
-
           <div class="eyebrow">
             04 / GET IN TOUCH
           </div>
@@ -707,7 +678,6 @@
             Informasi kontak profesional akan
             segera tersedia di sini.
           </p>
-
         </div>
       </section>
 
