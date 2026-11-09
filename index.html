@@ -4,15 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Santanu Wiryo Aji | Multimedia Creative & Visual Storyteller</title>
-
-  <meta name="description" content="Portofolio Santanu Wiryo Aji, Multimedia Creative &amp; Visual Storyteller yang berfokus pada videografi, fotografi, desain grafis, dan karya visual kreatif.">
-
   <meta name="theme-color" content="#101216">
+
+  <title>Santanu Wiryo Aji | Multimedia Creative &amp; Visual Storyteller</title>
+  <meta name="description" content="Portofolio Santanu Wiryo Aji. Multimedia Creative yang berfokus pada videografi, fotografi, desain grafis, dan visual storytelling.">
   <link rel="canonical" href="https://santanuwiryoaji.my.id/">
 
   <style>
+    :root {
+      --bg: #101216;
+      --card: #1b1e23;
+      --text: #f5f5f2;
+      --muted: #a9a9af;
+      --accent: #c5f277;
+      --border: #303238;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -23,9 +30,9 @@
 
     body {
       margin: 0;
+      background: var(--bg);
+      color: var(--text);
       font-family: Arial, Helvetica, sans-serif;
-      background: #101216;
-      color: #f5f5f2;
       line-height: 1.7;
     }
 
@@ -43,40 +50,40 @@
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 24px 0;
-      border-bottom: 1px solid #303238;
+      justify-content: space-between;
       gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     .logo {
-      font-weight: 800;
       font-size: 23px;
+      font-weight: 800;
       letter-spacing: -1px;
     }
 
     .accent {
-      color: #c5f277;
+      color: var(--accent);
     }
 
     nav {
       display: flex;
-      gap: 24px;
       flex-wrap: wrap;
+      gap: 22px;
     }
 
     nav a {
       font-size: 14px;
       color: #c6c6c6;
-      transition: color 0.3s;
+      transition: color .25s;
     }
 
     nav a:hover {
-      color: #c5f277;
+      color: var(--accent);
     }
 
-    /* HERO SECTION */
+    /* HERO */
 
     .hero {
       min-height: 76vh;
@@ -87,36 +94,38 @@
     }
 
     .eyebrow {
-      color: #c5f277;
-      text-transform: uppercase;
-      letter-spacing: 3px;
+      color: var(--accent);
       font-size: 12px;
       font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     h1 {
       font-size: clamp(48px, 9vw, 110px);
-      line-height: 1.06;
       letter-spacing: -4px;
+      line-height: 1.06;
       margin: 22px 0;
     }
 
-    .hero p {
-      color: #aaaaae;
-      max-width: 620px;
+    .hero p, .muted {
+      max-width: 680px;
+      color: var(--muted);
       font-size: 17px;
     }
 
     .button {
-      display: inline-block;
-      background: #c5f277;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      background: var(--accent);
       color: #111;
       padding: 14px 26px;
+      margin-top: 25px;
       border-radius: 5px;
       font-weight: 700;
-      margin-top: 25px;
-      width: fit-content;
-      transition: background 0.3s, transform 0.3s;
+      transition: transform .25s, background .25s;
     }
 
     .button:hover {
@@ -124,10 +133,14 @@
       transform: translateY(-3px);
     }
 
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     section {
       padding: 85px 0;
+    }
+
+    .divider {
+      border-top: 1px solid var(--border);
     }
 
     section h2 {
@@ -136,29 +149,17 @@
       margin: 0 0 24px;
     }
 
-    .divider {
-      border-top: 1px solid #303238;
-    }
-
-    .muted {
-      color: #aaaaae;
-      max-width: 680px;
-      font-size: 17px;
-    }
-
-    /* ABOUT ME */
-
     .about-content {
       max-width: 720px;
     }
 
     .about-content p {
-      color: #aaaaae;
+      color: var(--muted);
       font-size: 17px;
       margin-bottom: 24px;
     }
 
-    /* CREATIVE SKILLS & PROJECT CARDS */
+    /* CREATIVE SKILLS */
 
     .cards {
       display: grid;
@@ -168,24 +169,24 @@
     }
 
     .card {
-      background: #1b1e23;
-      border: 1px solid #303238;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 28px;
       min-height: 220px;
-      transition: transform 0.3s, border-color 0.3s;
+      transition: transform .25s, border-color .25s;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: #c5f277;
+      transform: translateY(-5px);
+      border-color: var(--accent);
     }
 
     .card span {
-      color: #c5f277;
+      color: var(--accent);
       font-size: 13px;
-      letter-spacing: 1px;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .card h3 {
@@ -194,16 +195,134 @@
     }
 
     .card p {
-      color: #a9a9af;
       font-size: 15px;
-      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* PORTFOLIO GALLERY */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .project {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 16 / 11;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .reel-media {
+      background:
+        radial-gradient(circle at 55% 35%,
+          #3c4c39 0%, transparent 48%),
+        linear-gradient(135deg,
+          #26352c 0%, #11181a 55%, #080a0b 100%);
+    }
+
+    .photo-media {
+      background: linear-gradient(140deg,
+        #343c42, #12191e 60%, #080a0d);
+    }
+
+    .design-media {
+      background: linear-gradient(135deg,
+        #35333f, #24252a 55%, #101116);
+    }
+
+    .project-media::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      pointer-events: none;
+    }
+
+    .play-icon {
+      display: grid;
+      place-items: center;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #111;
+      font-size: 30px;
+      padding-left: 5px;
+      box-shadow: 0 12px 45px rgba(0,0,0,.4);
+    }
+
+    .media-word {
+      font-size: clamp(22px, 3vw, 36px);
+      font-weight: 800;
+      letter-spacing: 3px;
+      opacity: .45;
+    }
+
+    .project-info {
+      padding: 25px;
+    }
+
+    .project-type {
+      display: block;
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .project-info h3 {
+      margin: 12px 0;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .project-info p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 700;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 4px;
+    }
+
+    .project-link:hover {
+      color: #fff;
+    }
+
+    .project-status {
+      color: #858891;
+      font-size: 13px;
     }
 
     /* CONTACT */
 
     .contact {
       background: #191c21;
-      border: 1px solid #303238;
+      border: 1px solid var(--border);
       border-radius: 14px;
       padding: 55px;
     }
@@ -212,22 +331,19 @@
       margin-top: 14px;
     }
 
-    /* FOOTER */
-
     footer {
-      border-top: 1px solid #303238;
+      border-top: 1px solid var(--border);
       padding: 30px 0;
       color: #8d8d94;
       font-size: 13px;
     }
 
-    /* RESPONSIVE MOBILE */
+    /* MOBILE */
 
     @media (max-width: 700px) {
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
       }
 
       nav {
@@ -251,7 +367,8 @@
         padding: 60px 0;
       }
 
-      .cards {
+      .cards,
+      .portfolio-grid {
         grid-template-columns: 1fr;
       }
 
@@ -269,7 +386,7 @@
         scroll-behavior: auto;
       }
 
-      .button, .card {
+      .button, .card, .project {
         transition: none;
       }
     }
@@ -277,10 +394,7 @@
 </head>
 
 <body>
-
   <div class="container">
-
-    <!-- HEADER -->
 
     <header>
       <a class="logo" href="#">
@@ -297,10 +411,8 @@
 
     <main>
 
-      <!-- HERO SECTION -->
-
+      <!-- HERO -->
       <div class="hero">
-
         <div class="eyebrow">
           MULTIMEDIA CREATIVE — 2026
         </div>
@@ -311,35 +423,29 @@
         </h1>
 
         <p>
-          Saya Santanu Wiryo Aji, seorang Multimedia Creative
-          yang berfokus pada Videography, Photography, dan
-          Graphic Design. Saya menggabungkan kreativitas,
-          teknologi, dan visual storytelling untuk menciptakan
+          Saya Santanu Wiryo Aji, seorang Multimedia
+          Creative yang berfokus pada Videography,
+          Photography, dan Graphic Design.
+          Saya menggabungkan kreativitas, teknologi,
+          dan visual storytelling untuk menciptakan
           karya yang menarik, bermakna, dan berkarakter.
         </p>
 
         <a class="button" href="#karya">
           Jelajahi Portofolio ↗
         </a>
-
       </div>
 
-      <!-- ABOUT ME -->
-
+      <!-- ABOUT -->
       <section id="tentang" class="divider">
-
-        <div class="eyebrow">
-          01 / ABOUT ME
-        </div>
-
+        <div class="eyebrow">01 / ABOUT ME</div>
         <h2>Tentang Saya</h2>
 
         <div class="about-content">
-
           <p>
-            Halo, saya Santanu Wiryo Aji, seorang Multimedia
-            Creative yang berfokus pada Videography,
-            Photography, dan Graphic Design.
+            Halo, saya Santanu Wiryo Aji, seorang
+            Multimedia Creative yang berfokus pada
+            Videography, Photography, dan Graphic Design.
           </p>
 
           <p>
@@ -367,19 +473,12 @@
             untuk menghadirkan perspektif baru
             melalui bahasa visual.
           </p>
-
         </div>
-
       </section>
 
-      <!-- CREATIVE SKILLS -->
-
+      <!-- SKILLS -->
       <section id="keahlian" class="divider">
-
-        <div class="eyebrow">
-          02 / CREATIVE SKILLS
-        </div>
-
+        <div class="eyebrow">02 / CREATIVE SKILLS</div>
         <h2>Keahlian Kreatif</h2>
 
         <p class="muted">
@@ -388,147 +487,147 @@
         </p>
 
         <div class="cards">
-
           <article class="card">
-
             <span>01 / MOTION</span>
-
             <h3>Videography</h3>
-
             <p>
               Visual storytelling, cinematography,
-              video editing, dan produksi konten
-              video untuk menghadirkan cerita
-              melalui gambar bergerak.
+              video editing, dan produksi konten video.
             </p>
-
           </article>
 
           <article class="card">
-
             <span>02 / STILLS</span>
-
             <h3>Photography</h3>
-
             <p>
-              Eksplorasi komposisi visual,
-              pencahayaan, fotografi kreatif,
-              serta pengolahan foto untuk
-              menghasilkan visual berkarakter.
+              Komposisi visual, pencahayaan,
+              fotografi kreatif, dan pengolahan foto.
             </p>
-
           </article>
 
           <article class="card">
-
             <span>03 / DESIGN</span>
-
             <h3>Graphic Design</h3>
-
             <p>
               Desain komunikasi visual,
               tipografi, komposisi grafis,
-              dan pengembangan identitas visual
-              yang menarik dan fungsional.
+              dan pengembangan identitas visual.
             </p>
-
           </article>
-
         </div>
-
       </section>
 
       <!-- PORTFOLIO -->
-
       <section id="karya" class="divider">
-
-        <div class="eyebrow">
-          03 / SELECTED WORKS
-        </div>
-
+        <div class="eyebrow">03 / SELECTED WORKS</div>
         <h2>Portofolio & Karya</h2>
 
         <p class="muted">
-          Kumpulan proyek dan karya pilihan
-          dalam videografi, fotografi,
-          dan desain grafis.
+          Kumpulan proyek pilihan dalam bidang
+          videografi, fotografi, dan desain grafis.
         </p>
 
-        <div class="cards">
+        <div class="portfolio-grid">
 
-          <article class="card">
+          <!-- REAL INSTAGRAM REEL -->
+          <article class="project">
+            <div class="project-media reel-media">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </div>
 
-            <span>PORTFOLIO / 001</span>
+            <div class="project-info">
+              <span class="project-type">
+                VIDEOGRAPHY / PROJECT 001
+              </span>
 
-            <h3>Videography</h3>
+              <h3>Instagram Reel — Video Editing</h3>
 
-            <p>
-              Dokumentasi dan proyek video
-              pilihan akan ditampilkan
-              pada bagian ini.
-            </p>
+              <p>
+                Salah satu karya video yang saya
+                publikasikan melalui Instagram Reels.
+                Tonton hasil editing selengkapnya
+                melalui tautan berikut.
+              </p>
 
+              <a
+                class="project-link"
+                href="https://www.instagram.com/reel/DeEkuOCPXRk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tonton karya video pertama di Instagram"
+              >
+                Tonton di Instagram ↗
+              </a>
+            </div>
           </article>
 
-          <article class="card">
+          <!-- PHOTOGRAPHY PLACEHOLDER -->
+          <article class="project">
+            <div class="project-media photo-media">
+              <span class="media-word">PHOTO</span>
+            </div>
 
-            <span>PORTFOLIO / 002</span>
+            <div class="project-info">
+              <span class="project-type">
+                PHOTOGRAPHY / GALLERY
+              </span>
 
-            <h3>Photography</h3>
+              <h3>Photography Works</h3>
 
-            <p>
-              Koleksi fotografi dan hasil
-              eksplorasi visual akan
-              ditampilkan pada bagian ini.
-            </p>
+              <p>
+                Koleksi foto pilihan dan eksplorasi
+                komposisi visual akan ditambahkan di sini.
+              </p>
 
+              <span class="project-status">
+                Galeri sedang disiapkan
+              </span>
+            </div>
           </article>
 
-          <article class="card">
+          <!-- GRAPHIC DESIGN PLACEHOLDER -->
+          <article class="project">
+            <div class="project-media design-media">
+              <span class="media-word">DESIGN</span>
+            </div>
 
-            <span>PORTFOLIO / 003</span>
+            <div class="project-info">
+              <span class="project-type">
+                GRAPHIC DESIGN / GALLERY
+              </span>
 
-            <h3>Graphic Design</h3>
+              <h3>Design Works</h3>
 
-            <p>
-              Kumpulan desain grafis,
-              karya komunikasi visual,
-              dan proyek kreatif lainnya.
-            </p>
+              <p>
+                Karya desain grafis, eksplorasi
+                tipografi, dan komunikasi visual.
+              </p>
 
+              <span class="project-status">
+                Galeri sedang disiapkan
+              </span>
+            </div>
           </article>
 
         </div>
-
       </section>
 
       <!-- CONTACT -->
-
       <section id="kontak" class="divider">
-
         <div class="contact">
-
-          <div class="eyebrow">
-            04 / GET IN TOUCH
-          </div>
-
+          <div class="eyebrow">04 / GET IN TOUCH</div>
           <h2>Mari Terhubung.</h2>
 
           <p class="muted">
             Tertarik berkolaborasi atau ingin
             mengenal karya saya lebih jauh?
-
-            Informasi kontak profesional
-            akan segera tersedia di sini.
+            Informasi kontak profesional akan
+            segera tersedia di sini.
           </p>
-
         </div>
-
       </section>
 
     </main>
-
-    <!-- FOOTER -->
 
     <footer>
       © 2026 Santanu Wiryo Aji.
@@ -536,6 +635,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
