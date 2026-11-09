@@ -7,7 +7,8 @@
   <meta name="theme-color" content="#101216">
 
   <title>Santanu Wiryo Aji | Multimedia Creative &amp; Visual Storyteller</title>
-  <meta name="description" content="Portofolio Santanu Wiryo Aji, Multimedia Creative yang berfokus pada videografi, fotografi, desain grafis, dan visual storytelling.">
+
+  <meta name="description" content="Portofolio Santanu Wiryo Aji, Multimedia Creative dengan karya videografi, fotografi, desain grafis, dan visual storytelling.">
 
   <link rel="canonical" href="https://santanuwiryoaji.my.id/">
 
@@ -21,9 +22,13 @@
       --border: #303238;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -43,14 +48,14 @@
       margin: auto;
     }
 
-    /* HEADER */
+    /* NAVIGATION */
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 24px 0;
+      justify-content: space-between;
       gap: 20px;
+      padding: 24px 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -60,7 +65,9 @@
       letter-spacing: -1px;
     }
 
-    .accent { color: var(--accent); }
+    .accent {
+      color: var(--accent);
+    }
 
     nav {
       display: flex;
@@ -71,9 +78,13 @@
     nav a {
       color: #c6c6c6;
       font-size: 14px;
+      transition: color .25s;
     }
 
-    nav a:hover { color: var(--accent); }
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--accent);
+    }
 
     /* HERO */
 
@@ -95,8 +106,8 @@
 
     h1 {
       font-size: clamp(48px, 9vw, 110px);
-      letter-spacing: -4px;
       line-height: 1.06;
+      letter-spacing: -4px;
       margin: 22px 0;
     }
 
@@ -118,7 +129,7 @@
       margin-top: 25px;
       border-radius: 5px;
       font-weight: 700;
-      transition: transform .3s;
+      transition: transform .3s, background .3s;
     }
 
     .button:hover {
@@ -126,9 +137,11 @@
       background: #ddffac;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTION */
 
-    section { padding: 85px 0; }
+    section {
+      padding: 85px 0;
+    }
 
     .divider {
       border-top: 1px solid var(--border);
@@ -140,7 +153,11 @@
       margin: 0 0 24px;
     }
 
-    .about-content { max-width: 720px; }
+    /* ABOUT */
+
+    .about-content {
+      max-width: 720px;
+    }
 
     .about-content p {
       color: var(--muted);
@@ -148,7 +165,7 @@
       margin-bottom: 24px;
     }
 
-    /* SKILLS */
+    /* CREATIVE SKILLS */
 
     .cards {
       display: grid;
@@ -188,16 +205,17 @@
       font-size: 15px;
     }
 
-    /* PORTFOLIO */
+    /* PORTFOLIO GALLERY */
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 35px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 36px;
     }
 
     .project {
+      min-width: 0;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -212,15 +230,16 @@
 
     .project-media {
       position: relative;
-      aspect-ratio: 16 / 11;
       display: flex;
       align-items: center;
       justify-content: center;
+      aspect-ratio: 16 / 10;
       overflow: hidden;
       background: #14191b;
     }
 
     .project-media img {
+      display: block;
       position: absolute;
       inset: 0;
       width: 100%;
@@ -240,8 +259,8 @@
       inset: 0;
       background: linear-gradient(
         to top,
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.05) 70%
+        rgba(0,0,0,.58),
+        rgba(0,0,0,.02) 75%
       );
       pointer-events: none;
     }
@@ -251,62 +270,78 @@
       z-index: 2;
       display: grid;
       place-items: center;
-      width: 74px;
-      height: 74px;
+      width: 78px;
+      height: 78px;
       border-radius: 50%;
       background: var(--accent);
       color: #111;
-      font-size: 28px;
+      font-size: 30px;
       padding-left: 5px;
       box-shadow: 0 12px 45px rgba(0,0,0,.4);
+      transition: transform .3s;
+    }
+
+    .project:hover .play-icon {
+      transform: scale(1.1);
     }
 
     .photo-media {
       background: linear-gradient(
-        140deg, #343c42, #12191e 60%, #080a0d
+        140deg,
+        #343c42,
+        #12191e 60%,
+        #080a0d
       );
     }
 
     .design-media {
       background: linear-gradient(
-        135deg, #35333f, #24252a 55%, #101116
+        135deg,
+        #35333f,
+        #24252a 55%,
+        #101116
       );
     }
 
     .media-word {
-      font-size: 30px;
+      font-size: clamp(24px, 4vw, 42px);
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       opacity: .45;
     }
 
-    .project-info { padding: 25px; }
+    /* PROJECT DETAILS */
+
+    .project-info {
+      padding: 28px;
+    }
 
     .project-type {
       display: block;
       color: var(--accent);
       font-size: 11px;
-      letter-spacing: 2px;
       font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .project-date {
       display: block;
       color: #909399;
       font-size: 12px;
-      margin-top: 9px;
+      margin-top: 10px;
     }
 
     .project-info h3 {
-      margin: 12px 0;
-      font-size: 22px;
+      margin: 14px 0;
+      font-size: 25px;
       line-height: 1.35;
     }
 
     .project-info p {
       color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 20px;
+      font-size: 15px;
+      margin-bottom: 22px;
     }
 
     .project-link {
@@ -316,21 +351,25 @@
       font-weight: 700;
       border-bottom: 1px solid var(--accent);
       padding-bottom: 4px;
-      margin-right: 12px;
-      margin-bottom: 8px;
+      margin-right: 16px;
+      margin-bottom: 10px;
     }
 
-    .project-link:hover { color: #fff; }
+    .project-link:hover {
+      color: #fff;
+    }
 
     .source-link {
       display: inline-block;
-      font-size: 12px;
       color: #a9a9af;
+      font-size: 12px;
       text-decoration: underline;
       text-underline-offset: 4px;
     }
 
-    .source-link:hover { color: #fff; }
+    .source-link:hover {
+      color: #fff;
+    }
 
     .project-status {
       color: #858891;
@@ -346,7 +385,9 @@
       padding: 55px;
     }
 
-    .contact h2 { margin-top: 14px; }
+    .contact h2 {
+      margin-top: 14px;
+    }
 
     footer {
       border-top: 1px solid var(--border);
@@ -355,7 +396,23 @@
       font-size: 13px;
     }
 
-    /* RESPONSIVE */
+    /* TABLET */
+
+    @media (max-width: 850px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-grid {
+        gap: 16px;
+      }
+
+      .project-info {
+        padding: 22px;
+      }
+    }
+
+    /* MOBILE */
 
     @media (max-width: 700px) {
       header {
@@ -363,33 +420,60 @@
         align-items: flex-start;
       }
 
-      nav { gap: 15px; }
-      nav a { font-size: 13px; }
+      nav {
+        gap: 15px;
+      }
 
-      h1 { letter-spacing: -2px; }
+      nav a {
+        font-size: 13px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
 
       .hero {
         min-height: 65vh;
         padding: 65px 0;
       }
 
-      section { padding: 60px 0; }
+      section {
+        padding: 60px 0;
+      }
 
       .cards,
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
 
-      .contact { padding: 30px; }
+      .project-info h3 {
+        font-size: 23px;
+      }
 
-      .about-content p { font-size: 16px; }
+      .contact {
+        padding: 30px;
+      }
+
+      .about-content p {
+        font-size: 16px;
+      }
+
+      .play-icon {
+        width: 66px;
+        height: 66px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
+      html {
+        scroll-behavior: auto;
+      }
 
-      .button, .card, .project,
-      .project-media img {
+      .button,
+      .card,
+      .project,
+      .project-media img,
+      .play-icon {
         transition: none;
       }
     }
@@ -432,6 +516,7 @@
           Saya Santanu Wiryo Aji, seorang Multimedia
           Creative yang berfokus pada Videography,
           Photography, dan Graphic Design.
+
           Saya menggabungkan kreativitas, teknologi,
           dan visual storytelling untuk menciptakan
           karya yang menarik, bermakna, dan berkarakter.
@@ -445,7 +530,10 @@
       <!-- ABOUT ME -->
 
       <section id="tentang" class="divider">
-        <div class="eyebrow">01 / ABOUT ME</div>
+        <div class="eyebrow">
+          01 / ABOUT ME
+        </div>
+
         <h2>Tentang Saya</h2>
 
         <div class="about-content">
@@ -465,8 +553,8 @@
             Melalui videografi, saya mengeksplorasi bagaimana
             gambar bergerak dapat membangun emosi dan
             menyampaikan cerita. Dalam fotografi, saya
-            berfokus pada komposisi, pencahayaan, serta
-            momen yang memiliki karakter.
+            berfokus pada komposisi, pencahayaan,
+            serta momen yang memiliki karakter.
           </p>
 
           <p>
@@ -486,7 +574,10 @@
       <!-- CREATIVE SKILLS -->
 
       <section id="keahlian" class="divider">
-        <div class="eyebrow">02 / CREATIVE SKILLS</div>
+        <div class="eyebrow">
+          02 / CREATIVE SKILLS
+        </div>
+
         <h2>Keahlian Kreatif</h2>
 
         <p class="muted">
@@ -517,18 +608,21 @@
             <span>03 / DESIGN</span>
             <h3>Graphic Design</h3>
             <p>
-              Desain komunikasi visual,
-              tipografi, komposisi grafis,
-              dan pengembangan identitas visual.
+              Desain komunikasi visual, tipografi,
+              komposisi grafis, dan pengembangan
+              identitas visual.
             </p>
           </article>
         </div>
       </section>
 
-      <!-- SELECTED WORKS -->
+      <!-- PORTFOLIO -->
 
       <section id="karya" class="divider">
-        <div class="eyebrow">03 / SELECTED WORKS</div>
+        <div class="eyebrow">
+          03 / SELECTED WORKS
+        </div>
+
         <h2>Portofolio &amp; Karya</h2>
 
         <p class="muted">
@@ -538,7 +632,7 @@
 
         <div class="portfolio-grid">
 
-          <!-- PROJECT 001: SUSUR SUNGAI BANGO -->
+          <!-- PROJECT 001 : SUSUR SUNGAI BANGO -->
 
           <article class="project">
 
@@ -551,7 +645,7 @@
             >
               <img
                 src="arung-jeram-reel.jpg"
-                alt="Dokumentasi kegiatan Susur Sungai Bango 2026, peserta menggunakan perahu di sungai berbatu"
+                alt="Dokumentasi kegiatan Susur Sungai Bango 2026"
                 loading="lazy"
                 decoding="async"
               >
@@ -568,7 +662,7 @@
               </span>
 
               <span class="project-date">
-                09 SEPTEMBER 2026 · MALANG, INDONESIA
+                09 SEPTEMBER 2026 · MALANG
               </span>
 
               <h3>
@@ -580,10 +674,9 @@
                 dokumentasi kegiatan Susur Sungai Bango
                 pada 9 September 2026 di Malang.
 
-                Kegiatan lintas instansi dan komunitas
-                ini berfokus pada pemantauan kondisi
-                sungai, identifikasi potensi pencemaran,
-                dan pelestarian sumber air.
+                Kegiatan ini berfokus pada pemantauan
+                kondisi sungai, persoalan lingkungan,
+                dan upaya pelestarian sumber air.
               </p>
 
               <a
@@ -607,15 +700,78 @@
             </div>
           </article>
 
-          <!-- PHOTOGRAPHY -->
+          <!-- PROJECT 002 : KHITANAN & RUWAT -->
+
+          <article class="project">
+
+            <a
+              class="project-media reel-media"
+              href="https://www.instagram.com/reel/DeEFXZwPKIl/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Tonton video Khitanan dan Ruwat"
+            >
+              <img
+                src="khitanan-ruwat-reel.jpg"
+                alt="Cuplikan video Khitanan dan Ruwat dengan busana tradisional"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <span class="play-icon" aria-hidden="true">
+                ▶
+              </span>
+            </a>
+
+            <div class="project-info">
+
+              <span class="project-type">
+                VIDEOGRAPHY / CULTURAL EVENT
+              </span>
+
+              <span class="project-date">
+                CULTURAL &amp; FAMILY EVENT FILM
+              </span>
+
+              <h3>
+                Khitanan &amp; Ruwat
+              </h3>
+
+              <p>
+                Karya video editing yang menampilkan
+                momen khitanan dan ruwat dalam
+                suasana tradisi budaya.
+
+                Visual menonjolkan busana tradisional,
+                ekspresi personal, serta detail
+                acara melalui pendekatan
+                cinematic visual storytelling.
+              </p>
+
+              <a
+                class="project-link"
+                href="https://www.instagram.com/reel/DeEFXZwPKIl/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tonton Video ↗
+              </a>
+
+            </div>
+          </article>
+
+          <!-- PHOTOGRAPHY PLACEHOLDER -->
 
           <article class="project">
 
             <div class="project-media photo-media">
-              <span class="media-word">PHOTO</span>
+              <span class="media-word">
+                PHOTO
+              </span>
             </div>
 
             <div class="project-info">
+
               <span class="project-type">
                 PHOTOGRAPHY / GALLERY
               </span>
@@ -630,18 +786,22 @@
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
+
             </div>
           </article>
 
-          <!-- GRAPHIC DESIGN -->
+          <!-- GRAPHIC DESIGN PLACEHOLDER -->
 
           <article class="project">
 
             <div class="project-media design-media">
-              <span class="media-word">DESIGN</span>
+              <span class="media-word">
+                DESIGN
+              </span>
             </div>
 
             <div class="project-info">
+
               <span class="project-type">
                 GRAPHIC DESIGN / GALLERY
               </span>
@@ -649,13 +809,15 @@
               <h3>Design Works</h3>
 
               <p>
-                Karya desain grafis, eksplorasi tipografi,
-                dan komunikasi visual.
+                Karya desain grafis, eksplorasi
+                tipografi, dan komunikasi visual
+                akan ditampilkan di sini.
               </p>
 
               <span class="project-status">
                 Galeri sedang disiapkan
               </span>
+
             </div>
           </article>
 
@@ -666,6 +828,7 @@
 
       <section id="kontak" class="divider">
         <div class="contact">
+
           <div class="eyebrow">
             04 / GET IN TOUCH
           </div>
@@ -675,9 +838,11 @@
           <p class="muted">
             Tertarik berkolaborasi atau ingin
             mengenal karya saya lebih jauh?
-            Informasi kontak profesional akan
-            segera tersedia di sini.
+
+            Informasi kontak profesional
+            akan segera tersedia di sini.
           </p>
+
         </div>
       </section>
 
