@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101216">
+  <meta name="theme-color" content="#100c0a">
   <title>Santanu Wiryo Aji | Multimedia Creative &amp; Visual Storyteller</title>
   <meta name="description" content="Portofolio Santanu Wiryo Aji: videografi, fotografi, desain grafis, video editing, dan kolaborasi produksi video musik Muzike Indonesia.">
   <link rel="canonical" href="https://santanuwiryoaji.my.id/">
   <style>
     :root {
-      --bg: #101216;
-      --card: #1b1e23;
+      --bg: #100c0a;
+      --card: #1b1715;
       --text: #f5f5f2;
       --muted: #a9a9af;
-      --accent: #c5f277;
-      --border: #303238;
+      --accent: #d5ad70;
+      --border: #39302b;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -78,30 +78,216 @@
     @media (max-width: 850px) { .cards { grid-template-columns: 1fr; } .portfolio-grid { gap: 16px; } .project-info { padding: 22px; } }
     @media (max-width: 700px) { header { flex-direction: column; align-items: flex-start; } nav { gap: 14px; } nav a { font-size: 13px; } h1 { letter-spacing: -2px; } .hero { min-height: 65vh; padding: 65px 0; } section { padding: 60px 0; } .portfolio-grid { grid-template-columns: 1fr; } .project-info h3 { font-size: 23px; } .production, .contact { padding: 28px; } .about-content p { font-size: 16px; } .play-icon { width: 66px; height: 66px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button, .card, .project, .project-media img { transition: none; } }
+
+    /* VERSION 2.6 — EDITORIAL CINEMATIC HERO */
+    body { background: #100c0a; }
+    .hero-shell {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      min-height: max(760px, calc(100svh - 34px));
+      margin: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(222, 186, 129, .52);
+      background: #0b0807;
+    }
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 83% 25%, rgba(110, 62, 24, .23), transparent 50%),
+        linear-gradient(90deg, #0b0807 8%, #100b09 45%, #100b09 100%);
+    }
+    .hero-photo {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 62%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 35% 41%;
+      opacity: .96;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 29%, #000 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, #000 29%, #000 100%);
+    }
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(0deg, rgba(9,6,6,.67) 0%, transparent 28%, transparent 73%, rgba(9,6,6,.24) 100%);
+    }
+    .hero-header {
+      width: 100%;
+      margin: 0 auto;
+      padding: clamp(22px, 3.4vw, 52px) clamp(23px, 4vw, 72px);
+      border-bottom: none;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .hero-brand { display: flex; flex-direction: column; line-height: 1.1; gap: 5px; }
+    .hero-brand strong { font-size: clamp(23px, 2.2vw, 34px); font-weight: 900; letter-spacing: -.06em; color: #fff8ef; }
+    .hero-brand small { color: #e4c9a3; font-size: 9px; letter-spacing: .32em; font-weight: 700; }
+    .hero-header nav { gap: clamp(12px, 1.7vw, 28px); }
+    .hero-header nav a {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+      color: rgba(255, 250, 242, .88);
+      transition: color .2s ease;
+    }
+    .hero-header nav a:hover { color: var(--accent); }
+    .hero-stage {
+      flex: 1;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 30px clamp(23px, 4vw, 72px) 105px;
+      z-index: 1;
+    }
+    .hero-copy { position: relative; z-index: 2; width: min(57%, 710px); }
+    .hero-label {
+      color: #eadac9;
+      font-size: clamp(10px, .82vw, 13px);
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .hero-heading {
+      margin: 24px 0 0;
+      color: #fbf3e8;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(54px, 6.8vw, 115px);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      text-wrap: balance;
+    }
+    .hero-heading em { font-weight: 400; font-style: normal; }
+    .hero-rule { display:block; width: 78px; height: 2px; background: var(--accent); margin-top: 35px; }
+    .hero-note {
+      position: absolute;
+      z-index: 2;
+      right: clamp(25px, 4vw, 74px);
+      bottom: 20%;
+      width: min(265px, 23%);
+      color: #f5ede4;
+      font-size: 14px;
+      line-height: 1.6;
+      text-shadow: 0 2px 16px #0c0807;
+    }
+    .hero-note p { margin: 0 0 18px; }
+    .hero-cta {
+      display: inline-block;
+      padding-bottom: 5px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #f5e6cd;
+      border-bottom: 2px solid var(--accent);
+    }
+    .hero-cta:hover { color: var(--accent); }
+    .hero-scroll {
+      position: absolute;
+      z-index: 2;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display:flex;
+      align-items:center;
+      flex-direction:column;
+      gap: 8px;
+      font-size: 9px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #f3e6d7;
+    }
+    .mouse { width: 16px; height: 28px; border: 1px solid #ecd7bc; border-radius: 10px; position: relative; }
+    .mouse:after { content: ''; position: absolute; top: 6px; left: 6px; width: 2px; height: 6px; border-radius: 2px; background: #e6c392; }
+    .after-hero { padding-top: 68px; }
+    .role { border-color: #76624a; color: #ece0d1; }
+    .button:hover { background: #f1d0a2; }
+    @media (max-width: 900px) {
+      .hero-shell { min-height: 750px; }
+      .hero-photo { width: 75%; opacity:.72; }
+      .hero-copy { width: 73%; }
+      .hero-heading { font-size: clamp(56px, 9vw, 90px); }
+      .hero-note { right: 4vw; bottom: 14%; width: 240px; }
+    }
+    @media (max-width: 650px) {
+      .hero-shell { min-height: min(800px, 100svh); margin: 9px; }
+      .hero-header { gap: 20px; align-items: flex-start; padding: 24px 21px; flex-direction: column; }
+      .hero-header nav { gap: 11px 16px; }
+      .hero-header nav a { font-size: 10px; letter-spacing: .035em; }
+      .hero-photo {
+        width: 100%;
+        height: 74%;
+        top: 9%;
+        object-position: 33% 20%;
+        opacity: .7;
+        -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 28%, #000 78%, transparent 100%);
+        mask-image: linear-gradient(0deg, transparent 0%, #000 28%, #000 78%, transparent 100%);
+      }
+      .hero-shell::after { background: linear-gradient(0deg, #0b0807 3%, transparent 52%, rgba(9,6,6,.55) 100%); }
+      .hero-stage { padding: 40px 21px 170px; align-items: flex-end; }
+      .hero-copy { width: 100%; }
+      .hero-heading { margin-top: 13px; font-size: clamp(49px, 13vw, 76px); line-height: 1.03; }
+      .hero-rule { margin-top: 20px; }
+      .hero-note { left: 21px; right: 21px; bottom: 52px; width: auto; font-size: 12px; }
+      .hero-note p { margin-bottom: 8px; max-width: 350px; }
+      .hero-scroll { display: none; }
+      .after-hero { padding-top: 42px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-header nav a { transition: none; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a class="logo" href="#">SANTANU<span class="accent">.</span></a>
+  <!-- FULL SCREEN CINEMATIC HERO (DESKTOP AND MOBILE) -->
+  <div class="hero-shell" id="top">
+    <img class="hero-photo" src="santanu-hero-cinematic.jpg" alt="Portrait cinematic Santanu dengan hoodie gelap dan pencahayaan keemasan" fetchpriority="high" decoding="async">
+    <header class="hero-header">
+      <a class="hero-brand" href="#top" aria-label="Kembali ke awal">
+        <strong>SANTANU.</strong>
+        <small>WIRYO AJI · MULTIMEDIA CREATIVE</small>
+      </a>
       <nav aria-label="Navigasi utama">
-        <a href="#tentang">Tentang</a>
-        <a href="#keahlian">Keahlian</a>
-        <a href="#karya">Karya</a>
-        <a href="#produksi-musik">Produksi Musik</a>
-        <a href="#kontak">Kontak</a>
+        <a href="#karya">Projects</a>
+        <a href="#keahlian">Services</a>
+        <a href="#tentang">About</a>
+        <a href="#produksi-musik">Collaboration</a>
+        <a href="#kontak">Contact</a>
       </nav>
     </header>
-
-    <main>
-      <!-- HERO -->
-      <div class="hero">
-        <div class="eyebrow">MULTIMEDIA CREATIVE — 2026</div>
-        <h1>Santanu<br>Wiryo <span class="accent">Aji.</span></h1>
-        <p>Saya Santanu Wiryo Aji, seorang Multimedia Creative yang berfokus pada Videography, Photography, dan Graphic Design. Saya menggabungkan kreativitas, teknologi, dan visual storytelling untuk menciptakan karya yang menarik, bermakna, dan berkarakter.</p>
-        <a class="button" href="#karya">Jelajahi Portofolio ↗</a>
+    <div class="hero-stage">
+      <div class="hero-copy">
+        <div class="hero-label">Videography · Photography · Creative Direction</div>
+        <h1 class="hero-heading">Beyond<br><em>the Frame.</em></h1>
+        <span class="hero-rule" aria-hidden="true"></span>
       </div>
-
+      <div class="hero-note">
+        <p>Saya Santanu Wiryo Aji. Mengubah ide menjadi cerita visual melalui kamera, editing, dan desain.</p>
+        <a class="hero-cta" href="#karya">Explore my works ↗</a>
+      </div>
+      <a class="hero-scroll" href="#tentang" aria-label="Gulir ke bagian Tentang Saya">
+        <span class="mouse" aria-hidden="true"></span>
+        <span>Scroll down</span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <main class="after-hero">
       <!-- ABOUT ME -->
       <section id="tentang" class="divider">
         <div class="eyebrow">01 / ABOUT ME</div>
