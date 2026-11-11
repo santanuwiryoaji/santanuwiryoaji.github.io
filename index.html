@@ -403,6 +403,78 @@
       .hero-stage { padding-bottom: 226px; }
       .hero-note { left: 19px; right: 19px; }
     }
+
+    /* CONTACT / CREATIVE COLLABORATION — 2026 */
+    .collaboration-section { scroll-margin-top: 24px; }
+    .collaboration-section .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+      gap: clamp(30px, 5vw, 70px);
+      padding: clamp(28px, 5.3vw, 75px);
+      background:
+        radial-gradient(ellipse at 0% 0%, rgba(188,132,68,.12), transparent 55%),
+        linear-gradient(135deg, #1b1512, #171311 72%, #141211);
+      border: 1px solid rgba(213,173,112,.34);
+      border-radius: 16px;
+    }
+    .collab-intro { display:flex; flex-direction:column; align-items:flex-start; min-width:0; }
+    .collab-intro h2 {
+      margin: 24px 0 24px;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 400;
+      font-size: clamp(35px, 4.5vw, 62px);
+      line-height: 1.07;
+      letter-spacing: -.045em;
+      color: #f9f0e6;
+    }
+    .collab-intro h2 em { font-weight: 400; color: var(--accent); }
+    .collab-lead { max-width: 460px; color: #c3b9af; font-size: 16px; line-height: 1.8; }
+    .collab-services { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    .collab-services span { border: 1px solid rgba(213,173,112,.4); border-radius: 99px; padding: 7px 12px; font-size:12px; color: #e6d9c8; }
+    .collab-signature { display:flex; align-items:center; gap:16px; margin-top:auto; padding-top:52px; }
+    .collab-line { width:2px; height:40px; background: var(--accent); }
+    .collab-signature strong { display:block; font-size:15px; }
+    .collab-signature small { display:block; font-size:12px; color:#b5aba0; }
+    .collab-contact-note { color:#a89a8c; font-size:12px; margin:18px 0 0; max-width:420px; }
+    .collab-form-wrap { min-width:0; border: 1px solid rgba(213,173,112,.2); border-radius: 12px; background: rgba(10,8,8,.44); padding: clamp(20px, 2.8vw, 36px); }
+    .collab-form-heading span { color:var(--accent); font-size:11px; font-weight:800; letter-spacing:.22em; }
+    .collab-form-heading h3 { font-family: Georgia, 'Times New Roman', serif; font-size:clamp(25px, 3vw, 34px); font-weight:400; margin:8px 0; }
+    .collab-form-heading p { color:#c2b7aa; font-size:13px; line-height:1.65; margin-bottom:22px; }
+    .collab-form { display:grid; gap:15px; }
+    .collab-field { display:flex; flex-direction:column; min-width:0; }
+    .collab-field label { margin-bottom:6px; color:#e8dbcb; font-size:12px; font-weight:700; }
+    .collab-field label span { color:var(--accent); }
+    .collab-field input, .collab-field select, .collab-field textarea, #collab-manual-text {
+      width:100%; max-width:100%; padding:12px 13px; border-radius:6px;
+      border:1px solid #665345; background:#130f0d; color:#faf1e8;
+      font:inherit; font-size:14px; line-height:1.5;
+    }
+    .collab-field input::placeholder, .collab-field textarea::placeholder { color:#a29487; }
+    .collab-field textarea { resize:vertical; min-height:110px; }
+    .collab-field :is(input,select,textarea):focus-visible, #collab-manual-text:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    .collab-submit {
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      min-height:50px; width:100%; padding:14px 18px;
+      margin-top:5px; background:var(--accent); color:#16100b;
+      border:0; border-radius:5px; font:inherit; font-weight:800;
+      font-size:12px; letter-spacing:.11em; cursor:pointer;
+    }
+    .collab-submit:hover { background:#ebc99c; }
+    .collab-submit:focus-visible { outline:2px solid white; outline-offset:4px; }
+    .collab-status { min-height:0; margin:0; font-size:13px; color:#ead3ad; }
+    .collab-status:empty { display:none; }
+    .collab-privacy { margin:0; color:#a99b8c; font-size:11px; line-height:1.65; }
+    .collab-manual-label { display:block; font-size:12px; margin-bottom:7px; }
+    @media (max-width: 780px) {
+      .collaboration-section .contact { grid-template-columns:1fr; gap:28px; }
+      .collab-signature { padding-top:30px; }
+    }
+    @media (max-width: 480px) {
+      .collaboration-section .contact { padding:23px 16px; border-radius:10px; }
+      .collab-form-wrap { padding:20px 14px; }
+      .collab-intro h2 { font-size:clamp(33px, 10vw, 46px); }
+      .collab-lead { font-size:15px; }
+    }
   </style>
 </head>
 <body>
@@ -601,12 +673,64 @@
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section id="kontak" class="divider">
+      <!-- CONTACT & CREATIVE COLLABORATION -->
+      <section id="kontak" class="divider collaboration-section">
         <div class="contact">
-          <div class="eyebrow">05 / GET IN TOUCH</div>
-          <h2>Mari Terhubung.</h2>
-          <p class="muted">Tertarik berkolaborasi atau ingin mengenal karya saya lebih jauh? Informasi kontak profesional akan segera tersedia di sini.</p>
+          <div class="collab-intro">
+            <div class="eyebrow">05 / CREATIVE COLLABORATION</div>
+            <h2>Let's Create<br><em>Something Meaningful.</em></h2>
+            <p class="collab-lead">Punya ide, cerita, atau proyek yang ingin diwujudkan? Mari rancang visual yang tidak hanya menarik, tetapi juga punya pesan dan karakter.</p>
+            <div class="collab-services" aria-label="Layanan kreatif">
+              <span>Videography</span>
+              <span>Photography</span>
+              <span>Video Editing</span>
+              <span>Graphic Design</span>
+            </div>
+            <div class="collab-signature">
+              <span class="collab-line" aria-hidden="true"></span>
+              <div><strong>Santanu Wiryo Aji</strong><small>Multimedia Creative &amp; Visual Storyteller</small></div>
+            </div>
+            <p class="collab-contact-note">Kontak publik untuk kolaborasi akan ditambahkan setelah kanal komunikasi ditentukan.</p>
+          </div>
+          <div class="collab-form-wrap">
+            <div class="collab-form-heading">
+              <span>START A PROJECT</span>
+              <h3>Ceritakan proyekmu.</h3>
+              <p>Isi detail singkat di bawah ini, kemudian salin brief untuk digunakan saat menghubungi saya.</p>
+            </div>
+            <form id="collab-form" class="collab-form">
+              <div class="collab-field">
+                <label for="collab-name">Nama / Brand <span aria-hidden="true">*</span></label>
+                <input id="collab-name" name="name" type="text" autocomplete="name" maxlength="120" required placeholder="Nama atau nama brand">
+              </div>
+              <div class="collab-field">
+                <label for="collab-reply">Email / WhatsApp untuk dihubungi <span aria-hidden="true">*</span></label>
+                <input id="collab-reply" name="reply" type="text" maxlength="160" required placeholder="Email atau nomor WhatsApp">
+              </div>
+              <div class="collab-field">
+                <label for="collab-type">Jenis kolaborasi <span aria-hidden="true">*</span></label>
+                <select id="collab-type" name="type" required>
+                  <option value="" disabled selected>Pilih layanan</option>
+                  <option value="Videography">Videography</option>
+                  <option value="Photography">Photography</option>
+                  <option value="Video Editing">Video Editing</option>
+                  <option value="Graphic Design">Graphic Design</option>
+                  <option value="Lainnya / Kolaborasi kreatif">Lainnya / Kolaborasi kreatif</option>
+                </select>
+              </div>
+              <div class="collab-field">
+                <label for="collab-story">Ceritakan ide atau kebutuhanmu <span aria-hidden="true">*</span></label>
+                <textarea id="collab-story" name="story" rows="4" maxlength="1800" required placeholder="Konsep, tujuan, lokasi, referensi visual, atau kebutuhan proyek"></textarea>
+              </div>
+              <button class="collab-submit" type="submit">SALIN BRIEF KOLABORASI <span aria-hidden="true">↗</span></button>
+              <p id="collab-status" class="collab-status" role="status" aria-live="polite"></p>
+              <div id="collab-manual" hidden>
+                <label class="collab-manual-label" for="collab-manual-text">Jika salin otomatis tidak tersedia, pilih dan salin teks ini:</label>
+                <textarea id="collab-manual-text" rows="6" readonly></textarea>
+              </div>
+              <p class="collab-privacy">Form ini tidak mengirim atau menyimpan informasi ke server. Data hanya disusun menjadi pesan untuk kamu salin sendiri.</p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -620,6 +744,42 @@
         if (menu) menu.open = false;
       });
     });
+
+    // On static GitHub Pages, prepare a brief locally without transmitting visitor data.
+    (function () {
+      const form = document.getElementById('collab-form');
+      if (!form) return;
+      const status = document.getElementById('collab-status');
+      const manualWrap = document.getElementById('collab-manual');
+      const manualText = document.getElementById('collab-manual-text');
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const fields = new FormData(form);
+        const brief = [
+          'Halo Santanu, saya ingin berdiskusi tentang kolaborasi kreatif.',
+          '',
+          'Nama / Brand: ' + fields.get('name').toString().trim(),
+          'Kontak: ' + fields.get('reply').toString().trim(),
+          'Layanan: ' + fields.get('type').toString().trim(),
+          'Ide / Detail Proyek:',
+          fields.get('story').toString().trim()
+        ].join('\n');
+        manualWrap.hidden = true;
+        status.textContent = '';
+        try {
+          if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(brief);
+          status.textContent = 'Brief berhasil disalin. Tempelkan pesannya saat menghubungi Santanu melalui kanal kontak yang tersedia.';
+        } catch (error) {
+          manualText.value = brief;
+          manualWrap.hidden = false;
+          manualText.focus();
+          manualText.select();
+          status.textContent = 'Salin otomatis tidak tersedia. Silakan salin teks brief yang muncul di bawah.';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
