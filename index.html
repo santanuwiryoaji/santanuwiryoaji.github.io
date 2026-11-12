@@ -475,6 +475,33 @@
       .collab-intro h2 { font-size:clamp(33px, 10vw, 46px); }
       .collab-lead { font-size:15px; }
     }
+
+    /* DESIGN WORKS — EDITORIAL GALLERY */
+    .design-gallery { margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(213,173,112,.28); scroll-margin-top: 28px; }
+    .design-gallery-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:28px; }
+    .design-gallery-heading h3 { font-family: Georgia, 'Times New Roman', serif; color:#f8eee1; font-size:clamp(33px, 5vw, 48px); font-weight:400; line-height:1.08; letter-spacing:-.045em; margin:12px 0 0; }
+    .design-gallery-heading p { margin:0; max-width:420px; font-size:14px; color:#a9a09a; }
+    .design-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .design-card { min-width:0; overflow:hidden; border-radius:11px; background:#1b1715; border:1px solid #39302b; transition:transform .25s,border-color .25s; }
+    .design-card:hover { transform:translateY(-4px); border-color:rgba(213,173,112,.75); }
+    .design-open { display:block; width:100%; margin:0; padding:0; border:0; text-align:initial; color:inherit; background:transparent; cursor:zoom-in; }
+    .design-card-media { position:relative; display:flex; justify-content:center; align-items:center; aspect-ratio:4/5; overflow:hidden; background:linear-gradient(150deg,#282522,#0c0c0e 80%); }
+    .design-card-media img { display:block; max-width:100%; max-height:100%; width:100%; height:100%; object-fit:contain; transition:transform .3s ease; }
+    .design-open:hover .design-card-media img { transform:scale(1.025); }
+    .design-zoom { position:absolute; right:13px; bottom:13px; padding:7px 10px; border:1px solid rgba(213,173,112,.6); border-radius:3px; background:rgba(11,8,8,.88); color:#f8e3c4; font-size:10px; letter-spacing:.11em; font-weight:800; }
+    .design-card-copy { padding:22px; }
+    .design-card-copy h4 { color:#faf5ef; font-size:20px; line-height:1.3; margin:12px 0; }
+    .design-card-copy p { font-size:13px; color:#a9a1a1; margin:0; }
+    .design-lightbox { padding:0; max-width:min(1100px,96vw); max-height:96svh; border:1px solid rgba(213,173,112,.52); border-radius:10px; color:#f7ecdd; background:#110d0b; box-shadow:0 22px 90px rgba(0,0,0,.85); }
+    .design-lightbox::backdrop { background:rgba(0,0,0,.92); backdrop-filter:blur(8px); }
+    .design-lightbox-inner { position:relative; display:flex; flex-direction:column; align-items:center; max-height:96svh; padding:44px 14px 14px; }
+    .design-lightbox img { display:block; max-width:100%; max-height:calc(96svh - 110px); object-fit:contain; }
+    .design-lightbox-caption { margin:10px 0 0; font-size:14px; text-align:center; color:#eee0d0; }
+    .design-lightbox-close { position:absolute; z-index:2; right:9px; top:7px; padding:4px 10px; background:#211915; border:1px solid #74593c; border-radius:5px; color:#fff; font-size:23px; cursor:pointer; }
+    .design-lightbox-close:focus-visible,.design-open:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    @media(max-width:920px){.design-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.design-gallery-heading{align-items:start;flex-direction:column;}}
+    @media(max-width:650px){.design-gallery{margin-top:42px;padding-top:30px}.design-grid{grid-template-columns:1fr;gap:18px}.design-card-media{aspect-ratio:4/5}.design-card-copy{padding:20px}.design-gallery-heading{gap:12px}.design-gallery-heading p{font-size:13px}}
+    @media(prefers-reduced-motion:reduce){.design-card,.design-card-media img{transition:none;}}
   </style>
 </head>
 <body>
@@ -630,16 +657,58 @@
             </div>
           </article>
 
-          <!-- DESIGN PLACEHOLDER -->
-          <article class="project">
-            <div class="project-media placeholder-design"><span class="media-word">DESIGN</span></div>
-            <div class="project-info">
-              <span class="project-type">GRAPHIC DESIGN / GALLERY</span>
-              <h3>Design Works</h3>
-              <p>Karya desain grafis, eksplorasi tipografi, dan komunikasi visual akan ditampilkan di sini.</p>
-              <span class="project-status">Galeri sedang disiapkan</span>
+        </div>
+        <!-- GRAPHIC DESIGN / SELECTED WORKS — three real projects -->
+        <div class="design-gallery" id="design-works">
+          <div class="design-gallery-heading">
+            <div>
+              <span class="eyebrow">GRAPHIC DESIGN / SELECTED WORKS</span>
+              <h3>Design Works<span class="accent">.</span></h3>
             </div>
-          </article>
+            <p>Eksplorasi desain jersey, identitas visual, dan ilustrasi logo. Klik karya untuk melihat detail dalam tampilan penuh.</p>
+          </div>
+          <div class="design-grid">
+            <article class="design-card">
+              <button type="button" class="design-open" data-design-image="santanu-design-warga-bledosan.webp" data-design-title="Warga Bledosan — Official Jersey" data-design-alt="Desain jersey Warga Bledosan dengan tampilan depan belakang, maskot tengkorak, dan detail motif." aria-label="Perbesar karya Warga Bledosan Official Jersey">
+                <span class="design-card-media">
+                  <img src="santanu-design-warga-bledosan.webp" width="941" height="1672" alt="Poster desain jersey Warga Bledosan dengan warna merah, hitam, putih, dan cyan" loading="lazy" decoding="async">
+                  <span class="design-zoom" aria-hidden="true">VIEW PROJECT ↗</span>
+                </span>
+              </button>
+              <div class="design-card-copy">
+                <span class="project-type">APPAREL / JERSEY DESIGN</span>
+                <h4>Warga Bledosan</h4>
+                <p>Official jersey concept dengan karakter maskot, logo, motif grafis, serta visualisasi desain depan dan belakang.</p>
+              </div>
+            </article>
+            <article class="design-card">
+              <button type="button" class="design-open" data-design-image="santanu-design-cfc-futsal.webp" data-design-title="CFC Futsal Team — Official Jersey" data-design-alt="Desain jersey CFC Futsal Team dominan hitam dan ungu, tampak depan belakang dengan nama MONDY dan nomor 13." aria-label="Perbesar karya CFC Futsal Team Official Jersey">
+                <span class="design-card-media">
+                  <img src="santanu-design-cfc-futsal.webp" width="1152" height="2048" alt="Desain jersey futsal CFC berwarna hitam ungu dengan nomor punggung 13" loading="lazy" decoding="async">
+                  <span class="design-zoom" aria-hidden="true">VIEW PROJECT ↗</span>
+                </span>
+              </button>
+              <div class="design-card-copy">
+                <span class="project-type">SPORTSWEAR / JERSEY DESIGN</span>
+                <h4>CFC Futsal Team</h4>
+                <p>Konsep visual jersey futsal dengan permainan garis dinamis, palet hitam–ungu, dan identitas tim yang konsisten.</p>
+              </div>
+            </article>
+            <article class="design-card">
+              <button type="button" class="design-open" data-design-image="santanu-design-logo-collection.webp" data-design-title="Logo & Brand Identity Collection" data-design-alt="Kolase sejumlah karya logo dan identitas brand antara lain CFC Futsal, Sembon Etan Village, Warga Bledosan, dan Zero Seven Generation." aria-label="Perbesar karya Logo dan Brand Identity Collection">
+                <span class="design-card-media design-card-media-wide">
+                  <img src="santanu-design-logo-collection.webp" width="1600" height="900" alt="Kolase karya desain logo kreatif olahraga, otomotif, serta maskot brand" loading="lazy" decoding="async">
+                  <span class="design-zoom" aria-hidden="true">VIEW PROJECT ↗</span>
+                </span>
+              </button>
+              <div class="design-card-copy">
+                <span class="project-type">LOGO / VISUAL IDENTITY</span>
+                <h4>Logo &amp; Brand Identity</h4>
+                <p>Koleksi logo, eksplorasi tipografi, ilustrasi maskot, dan identitas visual untuk berbagai kebutuhan kreatif.</p>
+              </div>
+            </article>
+          </div>
+        </div>
         </div>
       </section>
 
@@ -724,6 +793,15 @@
       </section>
     </main>
 
+    <dialog id="design-lightbox" class="design-lightbox" aria-label="Lihat detail karya desain">
+      <div class="design-lightbox-inner">
+        <button class="design-lightbox-close" type="button" aria-label="Tutup gambar">×</button>
+        <img id="design-lightbox-img" alt="">
+        <p class="design-lightbox-caption" id="design-lightbox-caption"></p>
+      </div>
+    </dialog>
+
+
     <footer>© 2026 Santanu Wiryo Aji. All Rights Reserved.</footer>
   </div>
   <script>
@@ -767,6 +845,30 @@
           manualText.select();
           status.textContent = 'Salin otomatis tidak tersedia. Silakan salin teks brief yang muncul di bawah.';
         }
+      });
+    })();
+
+    // In-page portfolio lightbox; no external links or Google Drive redirects.
+    (function () {
+      const dialog = document.getElementById('design-lightbox');
+      const picture = document.getElementById('design-lightbox-img');
+      const caption = document.getElementById('design-lightbox-caption');
+      if (!dialog || !picture || !caption) return;
+      let lastTrigger = null;
+      document.querySelectorAll('.design-open').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          lastTrigger = trigger;
+          picture.src = trigger.dataset.designImage;
+          picture.alt = trigger.dataset.designAlt || '';
+          caption.textContent = trigger.dataset.designTitle || 'Design Works';
+          if (!dialog.open) dialog.showModal();
+        });
+      });
+      dialog.querySelector('.design-lightbox-close').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', function () {
+        picture.removeAttribute('src');
+        if (lastTrigger) lastTrigger.focus();
       });
     })();
   </script>
