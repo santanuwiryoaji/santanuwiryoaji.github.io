@@ -502,6 +502,45 @@
     @media(max-width:920px){.design-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.design-gallery-heading{align-items:start;flex-direction:column;}}
     @media(max-width:650px){.design-gallery{margin-top:42px;padding-top:30px}.design-grid{grid-template-columns:1fr;gap:18px}.design-card-media{aspect-ratio:4/5}.design-card-copy{padding:20px}.design-gallery-heading{gap:12px}.design-gallery-heading p{font-size:13px}}
     @media(prefers-reduced-motion:reduce){.design-card,.design-card-media img{transition:none;}}
+
+    /* PHOTOGRAPHY / THROUGH MY LENS */
+    .photo-gallery { border-top:1px solid rgba(213,173,112,.25); padding-top:56px; margin-top:64px; scroll-margin-top:25px; }
+    .photo-gallery-intro { margin-bottom:44px; max-width:760px; }
+    .photo-gallery-intro h3 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(38px,5.5vw,70px); color:#faf0e6; font-weight:400; line-height:1.06; letter-spacing:-.06em; margin:13px 0 20px; }
+    .photo-gallery-intro h3 em { color:var(--accent); font-weight:400; }
+    .photo-gallery-intro p { max-width:690px; margin:0; color:#bfb4a9; font-size:15px; line-height:1.8; }
+    .photo-story { margin-top:44px; }
+    .photo-story + .photo-story { padding-top:34px; border-top:1px solid rgba(213,173,112,.18); }
+    .photo-story-header { display:flex; justify-content:space-between; align-items:end; gap:26px; margin-bottom:21px; }
+    .photo-story-header h4 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(26px,3.5vw,39px); font-weight:400; color:#f7efe5; letter-spacing:-.035em; line-height:1.2; margin:9px 0 0; }
+    .photo-story-header p { max-width:400px; margin:0; color:#ada49a; font-size:13px; line-height:1.7; }
+    .photo-tiles { display:grid; gap:12px; }
+    .photo-tiles-live { grid-template-columns:repeat(3,minmax(0,1fr)); }
+    .photo-tiles-action { grid-template-columns:repeat(4,minmax(0,1fr)); }
+    .photo-open { padding:0; position:relative; display:block; width:100%; min-width:0; overflow:hidden; border:1px solid rgba(213,173,112,.27); border-radius:8px; cursor:zoom-in; background:#1b1715; color:#f8e9d8; }
+    .photo-open img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .38s ease; }
+    .photo-tiles-live .photo-open { aspect-ratio:4/5; }
+    .photo-tiles-action .photo-open { aspect-ratio:1/1; }
+    .photo-open::after { content:""; position:absolute; inset:30% 0 0; background:linear-gradient(0deg,rgba(0,0,0,.62),transparent); pointer-events:none; }
+    .photo-open:hover img,.photo-open:focus-visible img { transform:scale(1.055); }
+    .photo-tile-label { position:absolute; z-index:2; display:flex; justify-content:space-between; align-items:center; left:12px; right:12px; bottom:11px; font-size:10px; font-weight:800; letter-spacing:.12em; color:#fff5e8; text-align:left; }
+    .photo-tile-label span { color:var(--accent); font-size:12px; }
+    .photo-open:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    .photo-lightbox { border:1px solid rgba(213,173,112,.42); border-radius:10px; background:#100c0a; color:#f7ede0; padding:0; width:min(960px,96vw); max-width:96vw; max-height:95svh; overflow:hidden; box-shadow:0 15px 70px rgba(0,0,0,.8); }
+    .photo-lightbox::backdrop { background:rgba(0,0,0,.94); }
+    .photo-lightbox-inner { position:relative; display:flex; flex-direction:column; align-items:center; padding:44px 13px 14px; max-height:95svh; }
+    .photo-lightbox img { display:block; max-width:100%; max-height:calc(95svh - 125px); object-fit:contain; }
+    .photo-lightbox-foot { display:flex; justify-content:space-between; gap:14px; align-items:center; width:100%; min-height:40px; margin-top:10px; }
+    .photo-lightbox-caption { margin:0; font-size:13px; color:#e4d5c3; text-align:center; }
+    .photo-lightbox-count { color:var(--accent); font-size:11px; letter-spacing:.12em; white-space:nowrap; }
+    .photo-lightbox-controls { display:flex; gap:7px; }
+    .photo-lightbox-controls button,.photo-lightbox-close { display:grid; place-items:center; min-width:42px; min-height:42px; background:#211915; color:#fff; border:1px solid #6b543c; border-radius:5px; font:inherit; cursor:pointer; }
+    .photo-lightbox-close { position:absolute; right:9px; top:6px; font-size:23px; }
+    .photo-lightbox-controls button:hover,.photo-lightbox-close:hover { background:#382a1f; }
+    .photo-lightbox :is(button):focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    @media(max-width:900px){.photo-tiles-action{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-story-header{flex-direction:column;align-items:start;gap:7px}}
+    @media(max-width:650px){.photo-gallery{margin-top:48px;padding-top:32px}.photo-gallery-intro{margin-bottom:32px}.photo-tiles{gap:8px}.photo-tiles-live{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-tiles-action{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-story{margin-top:30px}.photo-tile-label{font-size:9px;left:8px;right:8px;bottom:8px}.photo-lightbox-foot{gap:8px}.photo-lightbox-caption{font-size:11px}.photo-lightbox-count{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){.photo-open img{transition:none}}
   </style>
 </head>
 <body>
@@ -515,6 +554,7 @@
       </a>
       <nav aria-label="Navigasi utama">
         <a href="#karya">Projects</a>
+        <a href="#photography">Photography</a>
         <a href="#keahlian">Services</a>
         <a href="#tentang">About</a>
         <a href="#produksi-musik">Collaboration</a>
@@ -525,6 +565,7 @@
         <summary>MENU</summary>
         <nav aria-label="Navigasi mobile">
           <a href="#karya">Projects</a>
+        <a href="#photography">Photography</a>
           <a href="#keahlian">Services</a>
           <a href="#tentang">About</a>
           <a href="#produksi-musik">Collaboration</a>
@@ -657,6 +698,80 @@
             </div>
           </article>
 
+        </div>
+        <!-- PHOTOGRAPHY / THROUGH MY LENS — local image collection -->
+        <div class="photo-gallery" id="photography">
+          <header class="photo-gallery-intro">
+            <div class="eyebrow">PHOTOGRAPHY / THROUGH MY LENS</div>
+            <h3>Moments Worth <em>Keeping.</em></h3>
+            <p>Sebuah pilihan dokumentasi visual: dari ekspresi musisi hingga energi petualangan luar ruang. Setiap gambar menampilkan momen nyata, dikurasi dan diolah untuk portofolio.</p>
+          </header>
+          <div class="photo-story">
+            <div class="photo-story-header">
+              <div>
+                <span class="project-type">LIVE PERFORMANCE / VISUAL DOCUMENTARY</span>
+                <h4>01 / Live Music</h4>
+              </div>
+              <p>Momen di balik pertunjukan — ekspresi, gestur, dan suasana panggung yang ditangkap secara natural.</p>
+            </div>
+            <div class="photo-tiles photo-tiles-live">
+              <button class="photo-open" type="button" data-photo-group="live" data-photo-full="santanu-photography-01-live-music.webp" data-photo-title="Live Music — 01" aria-label="Perbesar foto 1 dari 3 koleksi Live Music">
+                <img src="santanu-photography-01-live-music.webp" alt="Vokalis memegang mikrofon dalam suasana pertunjukan musik intim" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>01</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="live" data-photo-full="santanu-photography-02-live-music.webp" data-photo-title="Live Music — 02" aria-label="Perbesar foto 2 dari 3 koleksi Live Music">
+                <img src="santanu-photography-02-live-music.webp" alt="Pemain drum elektronik tampil dalam pertunjukan musik" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>02</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="live" data-photo-full="santanu-photography-03-live-music.webp" data-photo-title="Live Music — 03" aria-label="Perbesar foto 3 dari 3 koleksi Live Music">
+                <img src="santanu-photography-03-live-music.webp" alt="Pemain bass sedang tampil di panggung pertunjukan musik" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>03</span></span>
+              </button>
+            </div>
+          </div>
+          <div class="photo-story">
+            <div class="photo-story-header">
+              <div>
+                <span class="project-type">ACTION / EVENT DOCUMENTARY</span>
+                <h4>02 / Off-Road Adventure</h4>
+              </div>
+              <p>Gerak kendaraan, percikan air, dan ekspresi peserta dalam rangkaian dokumentasi kegiatan off-road.</p>
+            </div>
+            <div class="photo-tiles photo-tiles-action">
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-04-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 01" aria-label="Perbesar foto 1 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-04-offroad-documentary.webp" alt="Kendaraan off-road menerobos air dengan percikan besar" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>01</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-05-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 02" aria-label="Perbesar foto 2 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-05-offroad-documentary.webp" alt="Jeep kuning melintasi sungai berbatu" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>02</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-06-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 03" aria-label="Perbesar foto 3 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-06-offroad-documentary.webp" alt="Jeep hijau melaju melewati genangan sungai" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>03</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-07-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 04" aria-label="Perbesar foto 4 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-07-offroad-documentary.webp" alt="Kendaraan off-road dan percikan air di lintasan berbatu" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>04</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-08-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 05" aria-label="Perbesar foto 5 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-08-offroad-documentary.webp" alt="Peserta dalam kendaraan jip melintasi air" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>05</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-10-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 06" aria-label="Perbesar foto 6 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-10-offroad-documentary.webp" alt="Jeep off-road mendekat di jalur sungai" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>06</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-11-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 07" aria-label="Perbesar foto 7 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-11-offroad-documentary.webp" alt="Peserta di dalam jip mengangkat tangan saat kegiatan" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>07</span></span>
+              </button>
+              <button class="photo-open" type="button" data-photo-group="offroad" data-photo-full="santanu-photography-12-offroad-documentary.webp" data-photo-title="Off-Road Adventure — 08" aria-label="Perbesar foto 8 dari 8 koleksi Off-Road Adventure">
+                <img src="santanu-photography-12-offroad-documentary.webp" alt="Peserta kegiatan off-road melambaikan tangan dari jip" loading="lazy" decoding="async">
+                <span class="photo-tile-label" aria-hidden="true">VIEW FRAME <span>08</span></span>
+              </button>
+            </div>
+          </div>
         </div>
         <!-- GRAPHIC DESIGN / SELECTED WORKS — three real projects -->
         <div class="design-gallery" id="design-works">
@@ -806,6 +921,23 @@
       </section>
     </main>
 
+
+    <dialog id="photo-lightbox" class="photo-lightbox" aria-label="Galeri foto Santanu">
+      <div class="photo-lightbox-inner">
+        <button type="button" class="photo-lightbox-close" aria-label="Tutup galeri">×</button>
+        <img id="photo-lightbox-image" alt="">
+        <div class="photo-lightbox-foot">
+          <div>
+            <p class="photo-lightbox-caption" id="photo-lightbox-caption"></p>
+            <span class="photo-lightbox-count" id="photo-lightbox-count"></span>
+          </div>
+          <div class="photo-lightbox-controls">
+            <button type="button" class="photo-lightbox-prev" aria-label="Foto sebelumnya">←</button>
+            <button type="button" class="photo-lightbox-next" aria-label="Foto berikutnya">→</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
     <dialog id="design-lightbox" class="design-lightbox" aria-label="Lihat detail karya desain">
       <div class="design-lightbox-inner">
         <button class="design-lightbox-close" type="button" aria-label="Tutup gambar">×</button>
@@ -881,6 +1013,51 @@
       dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
       dialog.addEventListener('close', function () {
         picture.removeAttribute('src');
+        if (lastTrigger) lastTrigger.focus();
+      });
+    })();
+
+    // Local photography gallery: navigate within each project without leaving the website.
+    (function () {
+      const dialog = document.getElementById('photo-lightbox');
+      const image = document.getElementById('photo-lightbox-image');
+      const caption = document.getElementById('photo-lightbox-caption');
+      const count = document.getElementById('photo-lightbox-count');
+      const thumbs = Array.from(document.querySelectorAll('.photo-open'));
+      if (!dialog || !image || !caption || !count || !thumbs.length || typeof dialog.showModal !== 'function') return;
+      let currentGroup = [], index = 0, lastTrigger = null;
+      function show() {
+        const trigger = currentGroup[index];
+        if (!trigger) return;
+        image.src = trigger.dataset.photoFull;
+        image.alt = trigger.querySelector('img').alt;
+        caption.textContent = trigger.dataset.photoTitle;
+        count.textContent = String(index + 1).padStart(2, '0') + ' / ' + String(currentGroup.length).padStart(2, '0');
+      }
+      function move(direction) {
+        if (!currentGroup.length) return;
+        index = (index + direction + currentGroup.length) % currentGroup.length;
+        show();
+      }
+      thumbs.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          lastTrigger = trigger;
+          currentGroup = thumbs.filter(function (item) { return item.dataset.photoGroup === trigger.dataset.photoGroup; });
+          index = currentGroup.indexOf(trigger);
+          show();
+          dialog.showModal();
+        });
+      });
+      dialog.querySelector('.photo-lightbox-prev').addEventListener('click', function () { move(-1); });
+      dialog.querySelector('.photo-lightbox-next').addEventListener('click', function () { move(1); });
+      dialog.querySelector('.photo-lightbox-close').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
+      });
+      dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', function () {
+        image.removeAttribute('src');
         if (lastTrigger) lastTrigger.focus();
       });
     })();
