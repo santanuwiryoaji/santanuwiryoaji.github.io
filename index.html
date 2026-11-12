@@ -541,7 +541,7 @@
     @media(max-width:900px){.photo-tiles-action{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-story-header{flex-direction:column;align-items:start;gap:7px}}
     @media(max-width:650px){.photo-gallery{margin-top:48px;padding-top:32px}.photo-gallery-intro{margin-bottom:32px}.photo-tiles{gap:8px}.photo-tiles-live{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-tiles-action{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-story{margin-top:30px}.photo-tile-label{font-size:9px;left:8px;right:8px;bottom:8px}.photo-lightbox-foot{gap:8px}.photo-lightbox-caption{font-size:11px}.photo-lightbox-count{font-size:10px}}
     @media(prefers-reduced-motion:reduce){.photo-open img{transition:none}}
-    /* CONTACT ENHANCEMENTS — direct channel remains unpublished until confirmed */
+    /* CONTACT ENHANCEMENTS — public professional WhatsApp and email */
     .collab-contact-guide { display:grid; grid-template-columns:28px minmax(0,1fr); gap:12px 12px; align-items:start; margin-top:30px; }
     .collab-guide-number { display:grid; place-items:center; width:28px; height:28px; font-weight:800; font-size:10px; color:#1b130c; background:var(--accent); border-radius:50%; }
     .collab-contact-guide strong { display:block; font-size:13px; font-weight:700; color:#f5e5d2; }
@@ -551,6 +551,22 @@
     .collab-share:hover { background:#302319; }
     .collab-share:focus-visible { outline:2px solid #f1d0a2; outline-offset:3px; }
     .collab-share[hidden] { display:none!important; }
+
+    /* CONTACT CHANNELS AND DIRECT PROJECT BRIEF LINKS */
+    .collab-contact-links { display:grid; grid-template-columns:minmax(0,1fr); gap:10px; width:100%; margin-top:28px; }
+    .collab-contact-link { display:grid; grid-template-columns:1fr auto; gap:2px 12px; align-items:center; min-width:0; padding:14px 15px; border:1px solid rgba(213,173,112,.36); border-radius:7px; background:rgba(12,9,8,.55); transition:background .2s,border-color .2s; }
+    .collab-contact-link:hover { background:rgba(213,173,112,.1); border-color:var(--accent); }
+    .collab-contact-channel { grid-column:1; font-size:10px; font-weight:800; letter-spacing:.19em; color:var(--accent); }
+    .collab-contact-link strong { grid-column:1; color:#f9efe3; font-size:clamp(13px,1.15vw,17px); overflow-wrap:anywhere; line-height:1.4; }
+    .collab-contact-arrow { grid-column:2;grid-row:1/span 2;font-size:21px;color:var(--accent); }
+    .collab-contact-links+.collab-contact-guide { margin-top:29px; }
+    .collab-send-wa { margin-top:5px; background:var(--accent); text-align:left; }
+    .collab-send-email { text-decoration:none; }
+    .collab-send-wa,.collab-send-email { display:flex; justify-content:space-between; align-items:center; width:100%; }
+    .collab-copy-secondary { display:flex; justify-content:space-between; align-items:center; width:100%; min-height:44px; padding:10px 15px; color:#e8d3b4; border:1px solid rgba(213,173,112,.3); background:transparent; border-radius:5px; font:inherit; font-size:12px; font-weight:700; letter-spacing:.08em; cursor:pointer; }
+    .collab-copy-secondary:hover { background:rgba(213,173,112,.08); }
+    :is(.collab-contact-link,.collab-copy-secondary):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    @media(max-width:480px){.collab-contact-link strong{font-size:14px}.collab-send-wa,.collab-send-email{font-size:11px;letter-spacing:.045em}}
   </style>
 </head>
 <body>
@@ -886,19 +902,31 @@
               <span class="collab-line" aria-hidden="true"></span>
               <div><strong>Santanu Wiryo Aji</strong><small>Multimedia Creative &amp; Visual Storyteller</small></div>
             </div>
+            <div class="collab-contact-links" aria-label="Kontak profesional Santanu">
+              <a class="collab-contact-link collab-contact-wa" href="https://wa.me/6282334555521?text=Halo%20Santanu%2C%20saya%20ingin%20berdiskusi%20mengenai%20proyek%20kolaborasi." target="_blank" rel="noopener noreferrer">
+                <span class="collab-contact-channel">WHATSAPP</span>
+                <strong>+62 823-3455-5521</strong>
+                <span class="collab-contact-arrow" aria-hidden="true">↗</span>
+              </a>
+              <a class="collab-contact-link collab-contact-email" href="mailto:Santanuwiryoaji27@gmail.com?subject=Kolaborasi%20Kreatif%20Santanu" >
+                <span class="collab-contact-channel">EMAIL</span>
+                <strong>Santanuwiryoaji27@gmail.com</strong>
+                <span class="collab-contact-arrow" aria-hidden="true">↗</span>
+              </a>
+            </div>
             <div class="collab-contact-guide" aria-label="Cara memulai kolaborasi">
               <span class="collab-guide-number">01</span>
               <div><strong>Ceritakan ide proyek</strong><p>Isi brief singkat pada formulir di samping.</p></div>
               <span class="collab-guide-number">02</span>
-              <div><strong>Salin atau bagikan brief</strong><p>Gunakan pesan yang disusun otomatis ketika menghubungi saya.</p></div>
+              <div><strong>Buka WhatsApp atau email</strong><p>Gunakan tombol di formulir agar pesan proyek langsung terisi.</p></div>
             </div>
-            <p class="collab-contact-note">Nomor WhatsApp atau email bisnis untuk kontak langsung akan ditampilkan setelah dikonfirmasi pemilik portofolio.</p>
+            <p class="collab-contact-note">Untuk pertanyaan singkat, klik kontak di atas. Untuk penawaran proyek, lengkapi formulir agar detailnya tersusun rapi.</p>
           </div>
           <div class="collab-form-wrap">
             <div class="collab-form-heading">
               <span>START A PROJECT</span>
               <h3>Ceritakan proyekmu.</h3>
-              <p>Isi detail singkat proyek. Salin pesannya, atau bagikan melalui aplikasi pilihan jika perangkatmu mendukung.</p>
+              <p>Isi brief singkat, lalu buka WhatsApp atau email dengan pesan yang sudah disiapkan. Kamu tetap perlu menekan Kirim pada aplikasi tujuan.</p>
             </div>
             <form id="collab-form" class="collab-form">
               <div class="collab-field">
@@ -932,14 +960,16 @@
                 <label for="collab-target">Target waktu <span class="collab-optional">(opsional)</span></label>
                 <input id="collab-target" name="target" type="text" maxlength="120" placeholder="Contoh: akhir bulan depan">
               </div>
-              <button class="collab-submit" type="submit">SALIN BRIEF KOLABORASI <span aria-hidden="true">↗</span></button>
+              <a id="collab-whatsapp-brief" class="collab-submit collab-send-wa" href="https://wa.me/6282334555521" target="_blank" rel="noopener noreferrer">BUKA WHATSAPP DENGAN BRIEF <span aria-hidden="true">↗</span></a>
+              <a id="collab-email-brief" class="collab-share collab-send-email" href="mailto:Santanuwiryoaji27@gmail.com">BUAT EMAIL DARI BRIEF <span aria-hidden="true">↗</span></a>
+              <button class="collab-copy-secondary" type="submit">SALIN BRIEF <span aria-hidden="true">↗</span></button>
               <button class="collab-share" id="collab-share" type="button" hidden>BAGIKAN MELALUI APLIKASI <span aria-hidden="true">↗</span></button>
               <p id="collab-status" class="collab-status" role="status" aria-live="polite"></p>
               <div id="collab-manual" hidden>
                 <label class="collab-manual-label" for="collab-manual-text">Jika salin otomatis tidak tersedia, pilih dan salin teks ini:</label>
                 <textarea id="collab-manual-text" rows="6" readonly></textarea>
               </div>
-              <p class="collab-privacy">Privasi: data dalam formulir tidak dikirim ke server atau disimpan oleh website. Menekan “Salin Brief” hanya menyalin teks. Jika memilih “Bagikan”, kamu sendiri yang memilih aplikasi dan penerimanya; pesan <strong>belum dikirim kepada Santanu</strong> sampai kamu mengirimkannya melalui kanal kontak yang tersedia.</p>
+              <p class="collab-privacy">Privasi: formulir ini tidak menyimpan data di website. Tombol WhatsApp dan email membuka aplikasi eksternal dengan pesan yang kamu isi. Periksa isi dan penerimanya sebelum menekan Kirim; pesan tidak dikirim otomatis. Tombol Salin Brief hanya menyalin teks.</p>
             </form>
           </div>
         </div>
@@ -991,6 +1021,22 @@
       const manualText = document.getElementById('collab-manual-text');
       const shareButton = document.getElementById('collab-share');
       if (shareButton && typeof navigator.share === 'function') shareButton.hidden = false;
+      // Prepare links synchronously on the original click, avoiding pop-up blockers.
+      const whatsappBriefLink = document.getElementById('collab-whatsapp-brief');
+      const emailBriefLink = document.getElementById('collab-email-brief');
+      if (whatsappBriefLink) whatsappBriefLink.addEventListener('click', function (event) {
+        if (!form.reportValidity()) { event.preventDefault(); status.textContent = 'Lengkapi kolom wajib untuk membuat pesan WhatsApp.'; return; }
+        whatsappBriefLink.href = 'https://wa.me/6282334555521?text=' + encodeURIComponent(briefText());
+        status.textContent = 'WhatsApp akan dibuka dengan brief terisi. Tekan Kirim di WhatsApp untuk mengirim pesan.';
+      });
+      if (emailBriefLink) emailBriefLink.addEventListener('click', function (event) {
+        if (!form.reportValidity()) { event.preventDefault(); status.textContent = 'Lengkapi kolom wajib untuk membuat email.'; return; }
+        const fields = new FormData(form);
+        const brand = String(fields.get('name') || '').trim().slice(0,70);
+        const subject = 'Permintaan Kolaborasi — ' + brand;
+        emailBriefLink.href = 'mailto:Santanuwiryoaji27@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(briefText());
+        status.textContent = 'Aplikasi email akan dibuka. Periksa lalu tekan Kirim untuk mengirim pesan.';
+      });
       function briefText() {
         const fields = new FormData(form);
         const line = function (name) { return String(fields.get(name) || '').trim(); };
