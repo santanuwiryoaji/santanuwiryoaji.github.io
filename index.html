@@ -541,6 +541,16 @@
     @media(max-width:900px){.photo-tiles-action{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-story-header{flex-direction:column;align-items:start;gap:7px}}
     @media(max-width:650px){.photo-gallery{margin-top:48px;padding-top:32px}.photo-gallery-intro{margin-bottom:32px}.photo-tiles{gap:8px}.photo-tiles-live{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-tiles-action{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-story{margin-top:30px}.photo-tile-label{font-size:9px;left:8px;right:8px;bottom:8px}.photo-lightbox-foot{gap:8px}.photo-lightbox-caption{font-size:11px}.photo-lightbox-count{font-size:10px}}
     @media(prefers-reduced-motion:reduce){.photo-open img{transition:none}}
+    /* CONTACT ENHANCEMENTS — direct channel remains unpublished until confirmed */
+    .collab-contact-guide { display:grid; grid-template-columns:28px minmax(0,1fr); gap:12px 12px; align-items:start; margin-top:30px; }
+    .collab-guide-number { display:grid; place-items:center; width:28px; height:28px; font-weight:800; font-size:10px; color:#1b130c; background:var(--accent); border-radius:50%; }
+    .collab-contact-guide strong { display:block; font-size:13px; font-weight:700; color:#f5e5d2; }
+    .collab-contact-guide p { margin:2px 0 0; font-size:12px; color:#a89b8e; }
+    .collab-optional { color:#9d9185; font-size:11px; font-weight:400; }
+    .collab-share { display:flex; align-items:center; justify-content:space-between; gap:14px; width:100%; min-height:50px; padding:13px 17px; font:inherit; font-size:12px; font-weight:800; letter-spacing:.08em; cursor:pointer; border:1px solid var(--accent); color:#f2d3a4; background:#1a130f; border-radius:5px; }
+    .collab-share:hover { background:#302319; }
+    .collab-share:focus-visible { outline:2px solid #f1d0a2; outline-offset:3px; }
+    .collab-share[hidden] { display:none!important; }
   </style>
 </head>
 <body>
@@ -876,13 +886,19 @@
               <span class="collab-line" aria-hidden="true"></span>
               <div><strong>Santanu Wiryo Aji</strong><small>Multimedia Creative &amp; Visual Storyteller</small></div>
             </div>
-            <p class="collab-contact-note">Kontak publik untuk kolaborasi akan ditambahkan setelah kanal komunikasi ditentukan.</p>
+            <div class="collab-contact-guide" aria-label="Cara memulai kolaborasi">
+              <span class="collab-guide-number">01</span>
+              <div><strong>Ceritakan ide proyek</strong><p>Isi brief singkat pada formulir di samping.</p></div>
+              <span class="collab-guide-number">02</span>
+              <div><strong>Salin atau bagikan brief</strong><p>Gunakan pesan yang disusun otomatis ketika menghubungi saya.</p></div>
+            </div>
+            <p class="collab-contact-note">Nomor WhatsApp atau email bisnis untuk kontak langsung akan ditampilkan setelah dikonfirmasi pemilik portofolio.</p>
           </div>
           <div class="collab-form-wrap">
             <div class="collab-form-heading">
               <span>START A PROJECT</span>
               <h3>Ceritakan proyekmu.</h3>
-              <p>Isi detail singkat di bawah ini, kemudian salin brief untuk digunakan saat menghubungi saya.</p>
+              <p>Isi detail singkat proyek. Salin pesannya, atau bagikan melalui aplikasi pilihan jika perangkatmu mendukung.</p>
             </div>
             <form id="collab-form" class="collab-form">
               <div class="collab-field">
@@ -891,7 +907,7 @@
               </div>
               <div class="collab-field">
                 <label for="collab-reply">Email / WhatsApp untuk dihubungi <span aria-hidden="true">*</span></label>
-                <input id="collab-reply" name="reply" type="text" maxlength="160" required placeholder="Email atau nomor WhatsApp">
+                <input id="collab-reply" name="reply" type="text" autocomplete="email" maxlength="160" required placeholder="Email atau nomor WhatsApp">
               </div>
               <div class="collab-field">
                 <label for="collab-type">Jenis kolaborasi <span aria-hidden="true">*</span></label>
@@ -908,13 +924,22 @@
                 <label for="collab-story">Ceritakan ide atau kebutuhanmu <span aria-hidden="true">*</span></label>
                 <textarea id="collab-story" name="story" rows="4" maxlength="1800" required placeholder="Konsep, tujuan, lokasi, referensi visual, atau kebutuhan proyek"></textarea>
               </div>
+              <div class="collab-field">
+                <label for="collab-location">Lokasi proyek <span class="collab-optional">(opsional)</span></label>
+                <input id="collab-location" name="location" type="text" maxlength="120" placeholder="Contoh: Malang, Jawa Timur">
+              </div>
+              <div class="collab-field">
+                <label for="collab-target">Target waktu <span class="collab-optional">(opsional)</span></label>
+                <input id="collab-target" name="target" type="text" maxlength="120" placeholder="Contoh: akhir bulan depan">
+              </div>
               <button class="collab-submit" type="submit">SALIN BRIEF KOLABORASI <span aria-hidden="true">↗</span></button>
+              <button class="collab-share" id="collab-share" type="button" hidden>BAGIKAN MELALUI APLIKASI <span aria-hidden="true">↗</span></button>
               <p id="collab-status" class="collab-status" role="status" aria-live="polite"></p>
               <div id="collab-manual" hidden>
                 <label class="collab-manual-label" for="collab-manual-text">Jika salin otomatis tidak tersedia, pilih dan salin teks ini:</label>
                 <textarea id="collab-manual-text" rows="6" readonly></textarea>
               </div>
-              <p class="collab-privacy">Form ini tidak mengirim atau menyimpan informasi ke server. Data hanya disusun menjadi pesan untuk kamu salin sendiri.</p>
+              <p class="collab-privacy">Privasi: data dalam formulir tidak dikirim ke server atau disimpan oleh website. Menekan “Salin Brief” hanya menyalin teks. Jika memilih “Bagikan”, kamu sendiri yang memilih aplikasi dan penerimanya; pesan <strong>belum dikirim kepada Santanu</strong> sampai kamu mengirimkannya melalui kanal kontak yang tersedia.</p>
             </form>
           </div>
         </div>
@@ -957,38 +982,63 @@
       });
     });
 
-    // On static GitHub Pages, prepare a brief locally without transmitting visitor data.
+    // Static contact brief: no server submission, no personal contact published until approved.
     (function () {
       const form = document.getElementById('collab-form');
       if (!form) return;
       const status = document.getElementById('collab-status');
       const manualWrap = document.getElementById('collab-manual');
       const manualText = document.getElementById('collab-manual-text');
+      const shareButton = document.getElementById('collab-share');
+      if (shareButton && typeof navigator.share === 'function') shareButton.hidden = false;
+      function briefText() {
+        const fields = new FormData(form);
+        const line = function (name) { return String(fields.get(name) || '').trim(); };
+        const result = [
+          'Halo Santanu, saya ingin berdiskusi tentang kolaborasi kreatif.',
+          '',
+          'Nama / Brand: ' + line('name'),
+          'Kontak balasan: ' + line('reply'),
+          'Layanan: ' + line('type')
+        ];
+        if (line('location')) result.push('Lokasi: ' + line('location'));
+        if (line('target')) result.push('Target waktu: ' + line('target'));
+        result.push('Ide / Detail Proyek:', line('story'));
+        return result.join('\n');
+      }
       form.addEventListener('submit', async function (event) {
         event.preventDefault();
         if (!form.reportValidity()) return;
-        const fields = new FormData(form);
-        const brief = [
-          'Halo Santanu, saya ingin berdiskusi tentang kolaborasi kreatif.',
-          '',
-          'Nama / Brand: ' + fields.get('name').toString().trim(),
-          'Kontak: ' + fields.get('reply').toString().trim(),
-          'Layanan: ' + fields.get('type').toString().trim(),
-          'Ide / Detail Proyek:',
-          fields.get('story').toString().trim()
-        ].join('\n');
         manualWrap.hidden = true;
         status.textContent = '';
+        const brief = briefText();
         try {
           if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
           await navigator.clipboard.writeText(brief);
-          status.textContent = 'Brief berhasil disalin. Tempelkan pesannya saat menghubungi Santanu melalui kanal kontak yang tersedia.';
+          status.textContent = 'Brief berhasil disalin. Pesan belum dikirim. Silakan tempelkan saat menghubungi Santanu.';
         } catch (error) {
           manualText.value = brief;
           manualWrap.hidden = false;
           manualText.focus();
           manualText.select();
-          status.textContent = 'Salin otomatis tidak tersedia. Silakan salin teks brief yang muncul di bawah.';
+          status.textContent = 'Salin otomatis tidak tersedia. Pilih dan salin teks brief di bawah.';
+        }
+      });
+      if (shareButton) shareButton.addEventListener('click', async function () {
+        if (!form.reportValidity()) return;
+        if (typeof navigator.share !== 'function') {
+          status.textContent = 'Fitur berbagi tidak tersedia di browser ini. Gunakan tombol Salin Brief.';
+          return;
+        }
+        try {
+          await navigator.share({ title: 'Brief kolaborasi untuk Santanu Wiryo Aji', text: briefText() });
+          status.textContent = 'Pilihan berbagi telah ditutup. Pastikan kamu mengirimkan pesan ke kontak Santanu yang benar.';
+        } catch (error) {
+          if (error && error.name === 'AbortError') {
+            status.textContent = 'Berbagi dibatalkan. Belum ada pesan yang dikirim oleh website.';
+          } else {
+            status.textContent = 'Fitur berbagi tidak tersedia. Gunakan tombol Salin Brief.';
+          }
         }
       });
     })();
