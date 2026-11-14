@@ -610,6 +610,26 @@
     .collab-copy-secondary:hover { background:rgba(213,173,112,.08); }
     :is(.collab-contact-link,.collab-copy-secondary):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
     @media(max-width:480px){.collab-contact-link strong{font-size:14px}.collab-send-wa,.collab-send-email{font-size:11px;letter-spacing:.045em}}
+
+    /* New video cards: use on-demand YouTube playback to keep initial page load light */
+    .youtube-play-card { width:100%; border:0; padding:0; color:inherit; font:inherit; cursor:pointer; }
+    .youtube-image-fallback { position:absolute; inset:0; display:grid; place-items:center; text-align:center; font-weight:800; font-size:19px; letter-spacing:.14em; line-height:1.7; color:#d5ad70; background:radial-gradient(ellipse at center,#46311e,#120d0a 72%); }
+    .youtube-play-card img { z-index:1; }
+    .youtube-play-card .play-icon { z-index:3; }
+    .youtube-play-link { font-family:inherit; cursor:pointer; background:transparent; border-top:0; border-left:0; border-right:0; }
+    :is(.youtube-play-card,.youtube-play-link):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    .youtube-modal { width:min(980px,96vw); max-width:96vw; padding:0; border-radius:9px; background:#100c0a; color:#f5f5f2; border:1px solid rgba(213,173,112,.48); box-shadow:0 20px 80px rgba(0,0,0,.8); }
+    .youtube-modal::backdrop { background:rgba(0,0,0,.92); }
+    .youtube-modal-inner { padding:49px 12px 18px; position:relative; }
+    .youtube-modal-close { position:absolute; right:10px; top:8px; width:35px; height:35px; color:white; background:#22170f; border:1px solid #795c37; border-radius:5px; font-size:23px; cursor:pointer; }
+    .youtube-modal-player { width:100%; aspect-ratio:16/9; background:#080808; }
+    .youtube-modal-player iframe { display:block; width:100%; height:100%; border:0; }
+    .youtube-modal-meta { margin:13px 0 5px; display:flex; gap:14px; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    .youtube-modal-meta strong { font-size:15px; }
+    .youtube-modal-meta a { color:var(--accent); font-size:13px; font-weight:bold; border-bottom:1px solid var(--accent); }
+    .youtube-modal-note { font-size:12px; color:#aba095; }
+    .youtube-modal :is(button,a):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    @media(max-width:600px){.youtube-modal-inner{padding:46px 7px 13px}.youtube-modal-meta strong{font-size:13px}}
   </style>
 </head>
 <body>
@@ -764,6 +784,54 @@
               <p>Proyek video musik yang saya kerjakan sebagai kameramen sekaligus video editor, memadukan pengambilan gambar dan penyuntingan untuk membangun cerita visual yang selaras dengan karakter lagu.</p>
               <p><strong>Peran saya:</strong> Kameramen &amp; Video Editor.</p>
               <a class="project-link" href="https://youtu.be/vAN-65y5bJ4" target="_blank" rel="noopener noreferrer">Tonton di YouTube ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 006 — temporary title; metadata requires confirmation -->
+          <article class="project youtube-portfolio-card">
+            <button type="button" class="project-media reel-media youtube-play-card" data-ytid="z6M5g0wV3UQ" data-yttitle="Karya Video YouTube — 01" aria-label="Putar karya YouTube 1 di website">
+              <span class="youtube-image-fallback" aria-hidden="true">YOUTUBE<br>PROJECT 01</span>
+              <img src="https://i.ytimg.com/vi/z6M5g0wV3UQ/hqdefault.jpg" alt="Thumbnail karya YouTube 1" loading="lazy" decoding="async">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="project-info">
+              <span class="project-type">VIDEOGRAPHY / SELECTED YOUTUBE WORK</span>
+              <h3>Karya Video YouTube — 01</h3>
+              <p>Proyek video pilihan untuk portofolio. Judul resmi dan kontribusi produksi akan ditambahkan setelah dikonfirmasi.</p>
+              <button type="button" class="project-link youtube-play-link" data-ytid="z6M5g0wV3UQ" data-yttitle="Karya Video YouTube — 01">Putar di Website ↗</button>
+              <a class="source-link" href="https://youtu.be/z6M5g0wV3UQ" target="_blank" rel="noopener noreferrer">Tonton di YouTube ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 007 — temporary title; metadata requires confirmation -->
+          <article class="project youtube-portfolio-card">
+            <button type="button" class="project-media reel-media youtube-play-card" data-ytid="4UoS8ixNDcs" data-yttitle="Karya Video YouTube — 02" aria-label="Putar karya YouTube 2 di website">
+              <span class="youtube-image-fallback" aria-hidden="true">YOUTUBE<br>PROJECT 02</span>
+              <img src="https://i.ytimg.com/vi/4UoS8ixNDcs/hqdefault.jpg" alt="Thumbnail karya YouTube 2" loading="lazy" decoding="async">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="project-info">
+              <span class="project-type">VIDEOGRAPHY / SELECTED YOUTUBE WORK</span>
+              <h3>Karya Video YouTube — 02</h3>
+              <p>Proyek video pilihan untuk portofolio. Judul resmi dan kontribusi produksi akan ditambahkan setelah dikonfirmasi.</p>
+              <button type="button" class="project-link youtube-play-link" data-ytid="4UoS8ixNDcs" data-yttitle="Karya Video YouTube — 02">Putar di Website ↗</button>
+              <a class="source-link" href="https://youtu.be/4UoS8ixNDcs" target="_blank" rel="noopener noreferrer">Tonton di YouTube ↗</a>
+            </div>
+          </article>
+
+          <!-- PROJECT 008 — temporary title; metadata requires confirmation -->
+          <article class="project youtube-portfolio-card">
+            <button type="button" class="project-media reel-media youtube-play-card" data-ytid="c7BbUOm_heU" data-yttitle="Karya Video YouTube — 03" aria-label="Putar karya YouTube 3 di website">
+              <span class="youtube-image-fallback" aria-hidden="true">YOUTUBE<br>PROJECT 03</span>
+              <img src="https://i.ytimg.com/vi/c7BbUOm_heU/hqdefault.jpg" alt="Thumbnail karya YouTube 3" loading="lazy" decoding="async">
+              <span class="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="project-info">
+              <span class="project-type">VIDEOGRAPHY / SELECTED YOUTUBE WORK</span>
+              <h3>Karya Video YouTube — 03</h3>
+              <p>Proyek video pilihan untuk portofolio. Judul resmi dan kontribusi produksi akan ditambahkan setelah dikonfirmasi.</p>
+              <button type="button" class="project-link youtube-play-link" data-ytid="c7BbUOm_heU" data-yttitle="Karya Video YouTube — 03">Putar di Website ↗</button>
+              <a class="source-link" href="https://youtu.be/c7BbUOm_heU" target="_blank" rel="noopener noreferrer">Tonton di YouTube ↗</a>
             </div>
           </article>
 
@@ -1020,6 +1088,20 @@
     </main>
 
 
+
+    <dialog id="youtube-modal" class="youtube-modal" aria-label="Pemutar video portofolio">
+      <div class="youtube-modal-inner">
+        <button class="youtube-modal-close" type="button" aria-label="Tutup pemutar video">×</button>
+        <div class="youtube-modal-player">
+          <iframe id="youtube-modal-iframe" title="Video YouTube Santanu" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="youtube-modal-meta">
+          <strong id="youtube-modal-title">Karya Video</strong>
+          <a id="youtube-modal-external" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Buka di YouTube ↗</a>
+        </div>
+        <p class="youtube-modal-note">Jika pemutar tidak tersedia karena pembatasan penyematan, gunakan tautan Buka di YouTube.</p>
+      </div>
+    </dialog>
     <dialog id="photo-lightbox" class="photo-lightbox" aria-label="Galeri foto Santanu">
       <div class="photo-lightbox-inner">
         <button type="button" class="photo-lightbox-close" aria-label="Tutup galeri">×</button>
@@ -1199,6 +1281,32 @@
         image.removeAttribute('src');
         if (lastTrigger) lastTrigger.focus();
       });
+    })();
+
+    // Embed the selected YouTube video only after the visitor clicks play.
+    (function () {
+      const dialog = document.getElementById('youtube-modal');
+      const frame = document.getElementById('youtube-modal-iframe');
+      const title = document.getElementById('youtube-modal-title');
+      const external = document.getElementById('youtube-modal-external');
+      if (!dialog || !frame || !title || !external || typeof dialog.showModal !== 'function') return;
+      let sourceButton = null;
+      document.querySelectorAll('[data-ytid]').forEach(function(button) {
+        button.addEventListener('click', function() {
+          const id = button.dataset.ytid;
+          if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return;
+          sourceButton = button;
+          const name = button.dataset.yttitle || 'Karya Video YouTube';
+          title.textContent = name;
+          frame.title = name;
+          external.href = 'https://youtu.be/' + id;
+          frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+          dialog.showModal();
+        });
+      });
+      dialog.querySelector('.youtube-modal-close').addEventListener('click', function() { dialog.close(); });
+      dialog.addEventListener('click', function(event) { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', function() { frame.removeAttribute('src'); if (sourceButton) sourceButton.focus(); });
     })();
   </script>
 </body>
