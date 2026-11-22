@@ -672,6 +672,27 @@
     @media (min-width:651px) and (max-width:1050px) { .hero-header > nav { column-gap:10px;row-gap:10px;justify-content:flex-end; } .hero-header > nav a {font-size:10px;} }
     @media (min-width:700px) and (max-width:1100px) { .cards { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     @media (max-width:699px) { .cards {grid-template-columns:1fr;} .web-projects-heading {display:block;} .web-projects-index {display:block;margin-top:6px;margin-bottom:0;} .web-project-visual {min-height:260px;padding:23px 16px 45px;} .web-preview-desktop{width:92%;} .web-preview-page{min-height:185px;} .web-preview-heading{font-size:clamp(25px,6vw,40px);} .web-preview-brand{font-size:12px;} .web-preview-phone{width:82px;height:156px;right:14px;bottom:21px;border-width:3px;border-radius:13px;padding:4px;} .web-preview-phone-brand{font-size:7px;top:8px;left:5px}.web-preview-phone-menu{font-size:5px;top:8px}.web-preview-phone-heading{font-size:15px;left:5px}.web-preview-note{font-size:7px;left:12px;bottom:12px;} .web-project-details p{font-size:14px;} }
+
+    /* Wish New Bening — conceptual web-project illustration (not a site screenshot) */
+    .wnb-feature { margin-top:26px; }
+    .wnb-visual { background:radial-gradient(ellipse at 48% 43%,rgba(71,144,127,.20),transparent 65%),linear-gradient(135deg,#071c19,#07110f 80%); }
+    .wnb-browser { width:min(780px,86%); overflow:hidden; border:2px solid #395950; border-radius:11px 11px 6px 6px; background:#f4faf6; box-shadow:0 25px 70px rgba(0,0,0,.68); }
+    .wnb-browser-top { display:flex;justify-content:space-between;align-items:center;height:29px;padding:0 12px;background:#143d35;color:#c9e6da;font-size:9px;letter-spacing:.04em; }
+    .wnb-browser .web-preview-dots i { background:#7cafa0; }
+    .wnb-browser-page { min-height:315px;aspect-ratio:1.92;position:relative;overflow:hidden;background:radial-gradient(circle at 73% 50%,rgba(116,195,172,.20),transparent 38%),linear-gradient(125deg,#f6faf6,#e1f0e8);color:#173f38;padding:25px; }
+    .wnb-browser-brand { position:relative;z-index:2;font-size:15px;font-weight:900;letter-spacing:.04em; }
+    .wnb-browser-brand span { color:#2f7d6d; }
+    .wnb-browser-kicker { position:absolute;z-index:2;top:27%;left:8%;font-size:9px;font-weight:800;letter-spacing:.14em;color:#397769; }
+    .wnb-browser-headline { position:absolute;z-index:2;left:8%;top:39%;font:400 clamp(24px,3.2vw,44px)/1.12 Georgia,'Times New Roman',serif;letter-spacing:-.045em;color:#193d36; }
+    .wnb-breath-visual { position:absolute;right:11%;top:22%;width:37%;aspect-ratio:1;border-radius:50%;border:1px solid rgba(47,125,109,.25);box-shadow:0 0 0 15px rgba(47,125,109,.07),0 0 0 39px rgba(47,125,109,.045),0 0 0 64px rgba(47,125,109,.025);background:radial-gradient(circle,#d3eee1 0%,#a8d4c4 40%,#6bb19b 100%);display:grid;place-items:center; }
+    .wnb-breath-core { width:45%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f5fff8,#2f7d6d);box-shadow:0 12px 25px rgba(33,83,73,.21); }
+    .wnb-phone { position:absolute;z-index:3;right:clamp(13px,6vw,90px);bottom:45px;width:clamp(115px,18%,170px);height:clamp(216px,30vw,305px);padding:7px;border:4px solid #2a5a4b;border-radius:20px;background:#071b16;box-shadow:0 22px 55px rgba(0,0,0,.6); }
+    .wnb-phone-inner { height:100%;position:relative;overflow:hidden;border-radius:10px;background:linear-gradient(165deg,#ecf8ef,#b5dcca);color:#173f38;padding:14px 9px;display:flex;flex-direction:column;justify-content:space-between; }
+    .wnb-phone-brand { position:relative;z-index:1;font-size:8px;letter-spacing:.02em;font-weight:900; }
+    .wnb-phone-circle { position:absolute;top:30%;left:17%;width:68%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#c7eddb,#65ab92);box-shadow:0 0 0 9px rgba(47,125,109,.1),0 0 0 23px rgba(47,125,109,.06); }
+    .wnb-phone-inner strong { position:relative;z-index:1;font:400 23px/1.06 Georgia,'Times New Roman',serif; }
+    .wnb-preview-note { color:#beded1; }
+    @media(max-width:699px) { .wnb-browser-page {min-height:185px;padding:13px;} .wnb-browser-brand {font-size:10px;} .wnb-browser-kicker {font-size:6px;} .wnb-browser-headline {font-size:clamp(19px,4.6vw,30px);} .wnb-phone {width:82px;height:156px;right:14px;bottom:21px;border-width:3px;border-radius:13px;padding:4px;} .wnb-phone-inner {padding:9px 5px;} .wnb-phone-brand {font-size:5px;} .wnb-phone-inner strong {font-size:15px;} }
   </style>
 </head>
 <body>
@@ -1034,7 +1055,7 @@
             <h2 id="web-projects-heading">Selected <em>Web Projects.</em></h2>
             <p class="muted">Pengembangan pengalaman digital yang menggabungkan identitas visual, desain antarmuka, dan struktur web yang responsif.</p>
           </div>
-          <span class="web-projects-index" aria-label="Satu karya web ditampilkan">01 / FEATURED PROJECT</span>
+          <span class="web-projects-index" aria-label="Dua karya web ditampilkan">02 / SELECTED PROJECTS</span>
         </div>
 
         <article class="web-project-feature" aria-label="Studi karya website portofolio Santanu Wiryo Aji">
@@ -1070,6 +1091,43 @@
             </div>
             <div class="web-project-actions">
               <a class="web-project-primary" href="https://santanuwiryoaji.my.id/" target="_blank" rel="noopener noreferrer">View Live Website <span aria-hidden="true">↗</span></a>
+              <a class="web-project-secondary" href="#kontak">Diskusikan Proyek Web <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 02 — Wish New Bening. Stylized concept; no live site screenshot asserted. -->
+        <article class="web-project-feature wnb-feature" aria-label="Proyek website Wish New Bening">
+          <div class="web-project-visual wnb-visual" aria-label="Ilustrasi konseptual antarmuka Wish New Bening, bukan tangkapan layar langsung">
+            <div class="wnb-browser" aria-hidden="true">
+              <div class="wnb-browser-top"><span class="web-preview-dots"><i></i><i></i><i></i></span><span>wishnewbening.com</span><span>●</span></div>
+              <div class="wnb-browser-page">
+                <div class="wnb-browser-brand">WISH <span>NEW BENING</span></div>
+                <span class="wnb-browser-kicker">MINDFUL BREATHING EXPERIENCE</span>
+                <div class="wnb-breath-visual"><span class="wnb-breath-core"></span></div>
+                <strong class="wnb-browser-headline">Clear Mind.<br>Calm Breath.<br>Better Day.</strong>
+              </div>
+            </div>
+            <div class="wnb-phone" aria-hidden="true">
+              <div class="wnb-phone-inner">
+                <span class="wnb-phone-brand">WISH NEW BENING</span>
+                <span class="wnb-phone-circle"></span>
+                <strong>Breathe<br>Easy.</strong>
+              </div>
+            </div>
+            <span class="web-preview-note wnb-preview-note">DESKTOP + MOBILE / CONCEPT PREVIEW</span>
+          </div>
+          <div class="web-project-details">
+            <span class="project-type">WELLNESS / BREATHING WEBSITE</span>
+            <h3>Wish New Bening <em>— Wellness Experience</em></h3>
+            <p>Proyek website bertema latihan pernapasan dan relaksasi, dengan pendekatan desain yang tenang, minimalis, dan berorientasi pada pengalaman pengguna. Arah visual menggabungkan warna hijau lembut dengan kesan modern wellness.</p>
+            <div class="web-project-tags" aria-label="Fokus karya Wish New Bening">
+              <span>Web Design</span>
+              <span>Wellness Experience</span>
+              <span>Responsive Layout</span>
+            </div>
+            <div class="web-project-actions">
+              <a class="web-project-primary" href="https://wishnewbening.com/" target="_blank" rel="noopener noreferrer">View Website <span aria-hidden="true">↗</span></a>
               <a class="web-project-secondary" href="#kontak">Diskusikan Proyek Web <span aria-hidden="true">↗</span></a>
             </div>
           </div>
