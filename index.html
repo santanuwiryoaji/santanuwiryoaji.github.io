@@ -704,6 +704,50 @@
     .wnb-phone-inner strong em {display:block;font:italic 400 .95em/1.04 Georgia,'Times New Roman',serif;color:#c7efff;text-shadow:0 1px 4px #245c9e;}
     .wnb-preview-note {color:#bcddff;}
     @media(max-width:699px) { .wnb-browser-page {min-height:185px;padding:13px;} .wnb-browser-brand{font-size:9px;} .wnb-nav-items{gap:4px;font-size:4px;} .wnb-browser-kicker{font-size:5px;top:25%;} .wnb-browser-headline{font-size:clamp(20px,4.8vw,31px);top:36%;} .wnb-browser-button{font-size:6px;padding:6px 9px;} .wnb-breath-panel{width:44%;} .wnb-pause-label{font-size:4px;} .wnb-breath-visual{box-shadow:0 0 0 7px rgba(132,199,253,.08),0 0 0 14px rgba(132,199,253,.07)} .wnb-breath-core em{font-size:7px;} .wnb-breath-core small{font-size:3px;} .wnb-panel-footer{font-size:4px;} .wnb-phone{width:82px;height:156px;right:14px;bottom:21px;border-width:3px;border-radius:13px;padding:4px;} .wnb-phone-inner{padding:9px 5px;} .wnb-phone-brand{font-size:5px;} .wnb-phone-inner strong{font-size:13px;} }
+
+    /* Muzike Indonesia — editorial music production showcase */
+    .mv-showcase { position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);gap:clamp(22px,3.1vw,46px);align-items:start;overflow:hidden;padding:clamp(24px,3.3vw,44px);background:radial-gradient(ellipse at 110% -10%,rgba(212,169,93,.11),transparent 50%),linear-gradient(132deg,#1a1d23 0%,#15161a 80%);border:1px solid rgba(212,169,93,.33); }
+    .mv-showcase::before { content:"";position:absolute;inset:14px;border:1px solid rgba(212,169,93,.06);border-radius:8px;pointer-events:none; }
+    .mv-story,.mv-media { position:relative;z-index:1;min-width:0; }
+    .mv-story .eyebrow { display:flex;align-items:center;gap:14px;letter-spacing:.17em; }
+    .mv-accent-line { display:block;width:48px;height:1px;background:linear-gradient(90deg,#d5ad70,transparent); }
+    .mv-story h3 {margin:15px 0 20px;font-size:clamp(29px,3vw,40px);letter-spacing:-.035em;color:#fbf6ef;}
+    .mv-showcase .mv-intro { color:#c7c5c4;line-height:1.85;font-size:15px;max-width:57ch;margin:0 0 23px;}
+    .mv-intro strong {color:#f3dbb8;font-weight:700;}
+    .mv-contributions { display:grid;gap:0;border-top:1px solid rgba(212,169,93,.18);border-bottom:1px solid rgba(212,169,93,.18); }
+    .mv-contribution { display:grid;grid-template-columns:26px 1fr;gap:13px;padding:12px 0;align-items:start; }
+    .mv-contribution+.mv-contribution {border-top:1px solid rgba(255,255,255,.055);}
+    .mv-index {color:#cda76e;font:700 11px/1.6 Arial,sans-serif;letter-spacing:.07em;}
+    .mv-contribution strong {display:block;margin-bottom:4px;color:#f3eadb;font-size:14px;line-height:1.3;}
+    .mv-contribution div>span {display:block;color:#aaa9ad;font-size:12px;line-height:1.6;}
+    .mv-project-note { display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:20px 0 13px;color:#d6c3a5;font-size:11px;letter-spacing:.025em;}
+    .mv-project-note strong {font:600 27px/1 Georgia,'Times New Roman',serif;color:#ecc88d;}
+    .mv-project-dot {width:3px;height:3px;border-radius:50%;background:#ad946f;}
+    .mv-showcase .mv-fineprint {font-size:12px;line-height:1.65;margin:0 0 23px;color:#91929a;}
+    .mv-actions {display:flex;align-items:center;flex-wrap:wrap;gap:16px;}
+    .mv-actions .mv-primary-cta {font-size:12px;display:inline-flex;align-items:center;justify-content:space-between;gap:11px;text-decoration:none;white-space:normal;}
+    .mv-secondary-cta {font-size:12px;font-weight:700;color:#e2c28e;border-bottom:1px solid rgba(213,173,112,.6);padding-bottom:5px;text-decoration:none;}
+    .mv-media {border:1px solid rgba(212,169,93,.17);background:#0f1115;padding:12px;border-radius:10px;box-shadow:0 15px 45px rgba(0,0,0,.22);}
+    .mv-visual-heading,.mv-media-footer {display:flex;justify-content:space-between;align-items:center;gap:9px;font-size:9px;letter-spacing:.15em;font-weight:800;color:#bda47d;padding:5px 2px 12px;}
+    .mv-media-footer {padding:13px 2px 3px;color:#8c8d90;letter-spacing:.12em;}
+    .mv-media-footer span:first-child {letter-spacing:3px;color:#cca86d;}
+    .mv-thumbs {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
+    .mv-thumb {position:relative;display:block;min-width:0;min-height:145px;overflow:hidden;border:1px solid rgba(222,192,143,.14);border-radius:7px;padding:0;background:#111;color:#fff;font:inherit;text-align:left;cursor:pointer;transition:border-color .2s ease,transform .2s ease;}
+    .mv-thumb-featured {grid-column:1/-1;min-height:225px;}
+    .mv-thumb img {display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.94);transition:transform .35s ease;}
+    .mv-thumb::after {content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.90) 0%,rgba(0,0,0,.2) 44%,rgba(0,0,0,.05) 85%);pointer-events:none;}
+    .mv-thumb:hover {border-color:#dfb879;transform:translateY(-2px);}
+    .mv-thumb:hover img {transform:scale(1.045);}
+    .mv-thumb-play {position:absolute;z-index:2;top:42%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:43px;height:43px;padding-left:3px;border-radius:50%;background:rgba(218,177,109,.91);color:#1a1209;font-size:15px;box-shadow:0 5px 20px rgba(0,0,0,.22);}
+    .mv-thumb-featured .mv-thumb-play {width:54px;height:54px;font-size:18px;}
+    .mv-thumb-label {position:absolute;z-index:2;left:12px;right:10px;bottom:12px;display:grid;gap:5px;text-shadow:0 2px 8px rgba(0,0,0,.55);}
+    .mv-thumb-kicker {color:#e9c188;font-size:9px;letter-spacing:.13em;font-weight:800;}
+    .mv-thumb-label strong {font-size:clamp(12px,1.4vw,19px);line-height:1.16;font-weight:800;}
+    .mv-thumb-featured .mv-thumb-label strong {font-size:clamp(17px,2vw,25px);}
+    .mv-showcase :is(button,a):focus-visible {outline:2px solid #e2c28e;outline-offset:4px;}
+    @media(max-width:950px){ .mv-showcase {grid-template-columns:1fr;} .mv-thumbs{grid-template-columns:repeat(2,minmax(0,1fr));} .mv-thumb-featured{min-height:275px;} }
+    @media(max-width:600px){ .mv-showcase{padding:20px;gap:24px;} .mv-showcase::before{inset:7px;} .mv-story h3{font-size:29px;} .mv-showcase .mv-intro{font-size:14px;} .mv-thumb-featured{min-height:185px;} .mv-thumb:not(.mv-thumb-featured){min-height:125px;} .mv-thumb-label{left:9px;bottom:9px;right:7px;} .mv-thumb-play{width:33px;height:33px;font-size:12px;} .mv-thumb-featured .mv-thumb-play{width:44px;height:44px;} .mv-thumb-label strong{font-size:12px;} .mv-thumb-featured .mv-thumb-label strong{font-size:19px;} .mv-thumb-kicker{font-size:8px;} .mv-actions .mv-primary-cta{width:100%;justify-content:center;} .mv-visual-heading{font-size:8px;} }
+    @media(prefers-reduced-motion:reduce){.mv-thumb,.mv-thumb img{transition:none!important;}}
   </style>
 </head>
 <body>
@@ -1153,22 +1197,58 @@
         </article>
       </section>
 
-      <!-- MUSIC VIDEO COLLABORATION -->
+      <!-- MUSIC VIDEO COLLABORATION: visual editorial showcase -->
       <section id="produksi-musik" class="divider">
         <div class="eyebrow">05 / MUSIC VIDEO PRODUCTION</div>
         <h2>Produksi Video Musik</h2>
-        <p class="muted">Pengalaman kerja tim dalam produksi visual musik dan proses pascaproduksi.</p>
-        <div class="production">
-          <div class="eyebrow">FEATURED COLLABORATION</div>
-          <h3>Muzike Indonesia</h3>
-          <p>Saya berkontribusi sebagai bagian dari tim produksi audiovisual Muzike Indonesia. Peran utama saya adalah kameramen atau camera operator dalam proses pengambilan gambar. Pada sejumlah proyek, saya juga berkolaborasi dalam proses video editing dan post-production.</p>
-          <div class="roles">
-            <span class="role">Camera Operator — Peran Utama</span>
-            <span class="role">Video Editing — Kolaborasi</span>
-            <span class="role">Music Video Production</span>
+        <p class="muted">Di balik setiap cerita visual, ada proses kreatif dan kerja sama tim.</p>
+        <div class="production mv-showcase">
+          <div class="mv-story">
+            <div class="eyebrow">FEATURED COLLABORATION <span class="mv-accent-line" aria-hidden="true"></span></div>
+            <h3>Muzike Indonesia</h3>
+            <p class="mv-intro">Saya berkontribusi dalam produksi audiovisual Muzike Indonesia, terutama sebagai <strong>camera operator</strong> untuk membangun cerita melalui pengambilan gambar. Pada sejumlah proyek, saya juga terlibat dalam <strong>video editing</strong> dan proses pascaproduksi.</p>
+            <div class="mv-contributions" aria-label="Kontribusi dalam produksi video musik">
+              <div class="mv-contribution">
+                <span class="mv-index" aria-hidden="true">01</span>
+                <div><strong>Camera Operator</strong><span>Fokus utama pada sinematografi dan pengambilan gambar.</span></div>
+              </div>
+              <div class="mv-contribution">
+                <span class="mv-index" aria-hidden="true">02</span>
+                <div><strong>Video Editing</strong><span>Kolaborasi penyuntingan pada proyek tertentu.</span></div>
+              </div>
+              <div class="mv-contribution">
+                <span class="mv-index" aria-hidden="true">03</span>
+                <div><strong>Post-Production</strong><span>Dukungan penyelesaian visual sesuai kebutuhan produksi.</span></div>
+              </div>
+            </div>
+            <div class="mv-project-note"><strong>03</strong><span>Selected music videos</span><span class="mv-project-dot" aria-hidden="true"></span><span>Team collaboration</span></div>
+            <p class="fineprint mv-fineprint">Peran dan kontribusi saya berbeda pada setiap proyek. Klik salah satu cuplikan untuk menonton langsung di website.</p>
+            <div class="mv-actions">
+              <a class="button mv-primary-cta" href="#karya">Jelajahi Karya Video <span aria-hidden="true">↗</span></a>
+              <a class="mv-secondary-cta" href="https://www.youtube.com/@muzikeindonesia" target="_blank" rel="noopener noreferrer">YouTube Muzike Indonesia <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <p class="fineprint">Kontribusi dan kredit pekerjaan dapat berbeda untuk setiap produksi.</p>
-          <a class="button" href="https://www.youtube.com/@muzikeindonesia" target="_blank" rel="noopener noreferrer">Kunjungi YouTube Muzike Indonesia ↗</a>
+          <div class="mv-media" aria-label="Tiga cuplikan video musik pilihan">
+            <div class="mv-visual-heading"><span>SELECTED FRAMES</span><span>01 — 03</span></div>
+            <div class="mv-thumbs">
+            <button class="mv-thumb mv-thumb-featured" type="button" data-ytid="z6M5g0wV3UQ" data-yttitle="Presidenku" aria-label="Putar video musik Presidenku langsung di website">
+              <img src="https://i.ytimg.com/vi/z6M5g0wV3UQ/hqdefault.jpg" alt="Cuplikan karya video musik Presidenku" loading="lazy" decoding="async">
+              <span class="mv-thumb-play" aria-hidden="true">▶</span>
+              <span class="mv-thumb-label"><span class="mv-thumb-kicker">01 / SELECTED WORK</span><strong>Presidenku</strong></span>
+            </button>
+            <button class="mv-thumb" type="button" data-ytid="4UoS8ixNDcs" data-yttitle="Bupati Kami" aria-label="Putar video musik Bupati Kami langsung di website">
+              <img src="https://i.ytimg.com/vi/4UoS8ixNDcs/hqdefault.jpg" alt="Cuplikan karya video musik Bupati Kami" loading="lazy" decoding="async">
+              <span class="mv-thumb-play" aria-hidden="true">▶</span>
+              <span class="mv-thumb-label"><span class="mv-thumb-kicker">02 / SELECTED WORK</span><strong>Bupati Kami</strong></span>
+            </button>
+            <button class="mv-thumb" type="button" data-ytid="c7BbUOm_heU" data-yttitle="Nyawiji Mbangun Deso" aria-label="Putar video musik Nyawiji Mbangun Deso langsung di website">
+              <img src="https://i.ytimg.com/vi/c7BbUOm_heU/hqdefault.jpg" alt="Cuplikan karya video musik Nyawiji Mbangun Deso" loading="lazy" decoding="async">
+              <span class="mv-thumb-play" aria-hidden="true">▶</span>
+              <span class="mv-thumb-label"><span class="mv-thumb-kicker">03 / SELECTED WORK</span><strong>Nyawiji Mbangun Deso</strong></span>
+            </button>
+            </div>
+            <div class="mv-media-footer"><span aria-hidden="true">▰ ▰ ▰</span><span>PLAY THE STORIES</span></div>
+          </div>
         </div>
       </section>
 
